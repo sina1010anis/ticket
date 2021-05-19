@@ -16601,18 +16601,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "index_page",
   data: function data() {
-    return {
-      type_send: 1,
-      type_car: '1',
-      next: 1,
-      back: 1
-    };
+    return {};
   },
-  methods: {
-    MT: function MT(event) {
-      console.log(event.target.value);
-    }
-  }
+  props: ['city'],
+  methods: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/index/view_ticket.vue?vue&type=script&lang=js":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/index/view_ticket.vue?vue&type=script&lang=js ***!
+  \***********************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "view_ticket"
 });
 
 /***/ }),
@@ -16655,7 +16664,7 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
   href: "/"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
   "class": "icon-logo fl-right",
-  src: "data/icon/logo.png",
+  src: "/data/icon/logo.png",
   alt: "logo"
 })], -1
 /* HOISTED */
@@ -16689,268 +16698,44 @@ var _hoisted_1 = {
   "class": "index-page-select-type-ticket obj-center-c obj-center"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "title"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h2", {
-  "class": "set-font",
-  style: {
-    "color": "#545454"
-  }
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("بلیط "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("b", {
-  style: {
-    "color": "#EF2D2B!important"
-  }
-}, "ماهان")])], -1
-/* HOISTED */
-);
-
-var _hoisted_3 = {
-  "class": "icon-index-page"
-};
-var _hoisted_4 = {
-  key: 0,
-  width: "180px!important",
-  src: "data/icon/pr.png",
-  alt: "پرواز"
-};
-var _hoisted_5 = {
-  key: 1,
-  width: "180px!important",
-  src: "data/icon/mt.png",
-  alt: "مترو"
-};
-var _hoisted_6 = {
-  key: 2,
-  width: "180px!important",
-  src: "data/icon/bus.png",
-  alt: "اتوبوس"
-};
-var _hoisted_7 = {
-  "class": "group-select-type-ticket obj-center"
-};
-var _hoisted_8 = {
-  "class": "item-select-group"
-};
-
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h5", {
-  "class": "set-font color-b-700 m-p al-right"
-}, "مبدا و مقصد", -1
-/* HOISTED */
-);
-
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "line"
-}, null, -1
-/* HOISTED */
-);
-
-var _hoisted_11 = {
-  "class": "obj-end-center"
-};
-
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
-  "class": "set-font color-b-600 f-12 label-radio-btn",
-  "for": "1T"
-}, "یک طرفه", -1
-/* HOISTED */
-);
-
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
-  "class": "set-font color-b-600 f-12 label-radio-btn",
-  "for": "2T"
-}, "دو طرفه", -1
-/* HOISTED */
-);
-
-var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "line"
-}, null, -1
-/* HOISTED */
-);
-
-var _hoisted_15 = {
-  "class": "obj-end-center group-select-type-ticket-select-input"
-};
-
-var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("option", {
-  value: "1",
-  selected: ""
-}, "برتنیا", -1
-/* HOISTED */
-);
-
-var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("option", {
-  value: "2"
-}, "نیویورک", -1
-/* HOISTED */
-);
-
-var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("option", {
-  value: "3"
-}, "برزیل", -1
-/* HOISTED */
-);
-
-var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
-  "class": "set-font color-b-600 f-12",
-  "for": "M2"
-}, "مقصد", -1
-/* HOISTED */
-);
-
-var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("option", {
-  value: "1",
-  selected: ""
-}, "مشهد", -1
-/* HOISTED */
-);
-
-var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("option", {
-  value: "2"
-}, "تهران", -1
-/* HOISTED */
-);
-
-var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("option", {
-  value: "3"
-}, "تبریز", -1
-/* HOISTED */
-);
-
-var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
-  "class": "set-font color-b-600 f-12",
-  "for": "M1"
-}, "مبدا", -1
-/* HOISTED */
-);
-
-var _hoisted_24 = {
-  "class": "item-select-group"
-};
-
-var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h5", {
-  "class": "set-font color-b-700 m-p al-right"
-}, "نوع حمل و نقل", -1
-/* HOISTED */
-);
-
-var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "line"
-}, null, -1
-/* HOISTED */
-);
-
-var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("br", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_28 = {
-  "class": "obj-end-center"
-};
-
-var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
-  "class": "set-font color-b-600 f-12 label-radio-btn",
-  "for": "airplane"
-}, "هواپیما", -1
-/* HOISTED */
-);
-
-var _hoisted_30 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
-  "class": "set-font color-b-600 f-12 label-radio-btn",
-  "for": "train"
-}, "قطار", -1
-/* HOISTED */
-);
-
-var _hoisted_31 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
-  "class": "set-font color-b-600 f-12 label-radio-btn",
-  "for": "bus"
-}, "اتوبوس", -1
-/* HOISTED */
-);
-
-var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "obj-center m-p group-btn-send-ticket"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
-  "class": "btn-send-ticket-view set-font"
-}, " برسی بلیط ")], -1
-/* HOISTED */
-);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"title\" data-v-08801104><h2 class=\"set-font\" style=\"color:#545454;\" data-v-08801104>بلیط <b style=\"color:#EF2D2B!important;\" data-v-08801104>ماهان</b></h2></div><div class=\"icon-index-page\" data-v-08801104><img width=\"180px!important\" src=\"data/icon/pr.png\" alt=\"پرواز\" data-v-08801104></div>", 2);
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [_ctx.type_car === '1' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("img", _hoisted_4)) : _ctx.type_car === '2' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("img", _hoisted_5)) : _ctx.type_car === '3' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("img", _hoisted_6)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_8, [_hoisted_9, _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
-    checked: "",
-    "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
-      return _ctx.type_send = $event;
-    }),
-    type: "radio",
-    name: "Send",
-    id: "1T",
-    value: "1"
-  }, null, 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, _ctx.type_send]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [_hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
-    "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
-      return _ctx.type_send = $event;
-    }),
-    type: "radio",
-    name: "Send",
-    id: "2T",
-    value: "2"
-  }, null, 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, _ctx.type_send]])])]), _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("select", {
-    "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
-      return _ctx.next = $event;
-    }),
-    "class": "set-font f-12 color-b-600",
-    name: "Send",
-    id: "M2"
-  }, [_hoisted_16, _hoisted_17, _hoisted_18], 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, _ctx.next]]), _hoisted_19]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("select", {
-    "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
-      return _ctx.back = $event;
-    }),
-    "class": "set-font f-12 color-b-600",
-    name: "Send",
-    id: "M1"
-  }, [_hoisted_20, _hoisted_21, _hoisted_22], 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, _ctx.back]]), _hoisted_23])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_24, [_hoisted_25, _hoisted_26, _hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [_hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
-    checked: "",
-    "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
-      return _ctx.type_car = $event;
-    }),
-    type: "radio",
-    name: "type_select",
-    id: "airplane",
-    value: "1"
-  }, null, 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, _ctx.type_car]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [_hoisted_30, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
-    "onUpdate:modelValue": _cache[6] || (_cache[6] = function ($event) {
-      return _ctx.type_car = $event;
-    }),
-    type: "radio",
-    name: "type_select",
-    id: "train",
-    value: "2"
-  }, null, 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, _ctx.type_car]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [_hoisted_31, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
-    "onUpdate:modelValue": _cache[7] || (_cache[7] = function ($event) {
-      return _ctx.type_car = $event;
-    }),
-    type: "radio",
-    name: "type_select",
-    id: "bus",
-    value: "3"
-  }, null, 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, _ctx.type_car]])])])])]), _hoisted_32]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [_hoisted_2]);
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/index/view_ticket.vue?vue&type=template&id=7f8e1624&scoped=true":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/index/view_ticket.vue?vue&type=template&id=7f8e1624&scoped=true ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+
+var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("data-v-7f8e1624");
+
+(0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-7f8e1624");
+
+var _hoisted_1 = {
+  "class": "group-item-ticket"
+};
+
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<span class=\"part-filter fl-right\" data-v-7f8e1624><h4 class=\"set-font color-b-600 al-right\" data-v-7f8e1624>فیلتر</h4><span class=\"line fl-right\" data-v-7f8e1624></span><span class=\"item-filter fl-right\" data-v-7f8e1624><h5 class=\"set-font color-b-600 al-right m-p\" data-v-7f8e1624>تاریخ</h5><span class=\"line fl-right\" data-v-7f8e1624></span><input class=\"set-font color-b-600 al-right\" type=\"text\" placeholder=\"تاریخ رفت\" data-v-7f8e1624><input class=\"set-font color-b-600 al-right\" type=\"text\" placeholder=\"تاریخ برگشت\" data-v-7f8e1624></span><span class=\"item-filter fl-right\" data-v-7f8e1624><h5 class=\"set-font color-b-600 al-right m-p\" data-v-7f8e1624>نوع سفر</h5><span class=\"line fl-right\" data-v-7f8e1624></span><select class=\"set-font color-b-600\" name=\"item_filter\" data-v-7f8e1624><option value=\"1\" data-v-7f8e1624>test</option><option value=\"1\" data-v-7f8e1624>test</option><option value=\"1\" data-v-7f8e1624>test</option><option value=\"1\" data-v-7f8e1624>test</option><option value=\"1\" data-v-7f8e1624>test</option><option value=\"1\" data-v-7f8e1624>test</option><option value=\"1\" data-v-7f8e1624>test</option><option value=\"1\" data-v-7f8e1624>test</option><option value=\"1\" data-v-7f8e1624>test</option><option value=\"1\" data-v-7f8e1624>test</option></select></span></span><span class=\"part-ticket fl-left\" data-v-7f8e1624><ul class=\"m-p\" data-v-7f8e1624><li class=\"vip\" data-v-7f8e1624><img class=\"fl-right\" src=\"/data/icon/mt.png\" alt=\"\" data-v-7f8e1624><span class=\"view-des-ticket fl-right\" data-v-7f8e1624><span class=\"w-100 obj-center title-name-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span><span class=\"w-100 obj-end-center des-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span></span><span class=\"view-des-ticket fl-right\" data-v-7f8e1624><span class=\"w-100 obj-center title-name-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span><span class=\"w-100 obj-end-center des-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span></span><span class=\"price-and-buy  view-des-ticket fl-left\" style=\"background-color:unset;margin:0;\" data-v-7f8e1624><p class=\"f-20 al-center m-p set-font\" style=\"color:#EF2D2B;\" data-v-7f8e1624>12500000000</p><p class=\"f-16 al-center m-p set-font\" style=\"color:#FFD1D0;\" data-v-7f8e1624>تومان</p><a href=\"\" class=\"btn-buy-ticket set-font f-12\" data-v-7f8e1624>خرید</a></span></li><li data-v-7f8e1624><img class=\"fl-right\" src=\"/data/icon/mt.png\" alt=\"\" data-v-7f8e1624><span class=\"view-des-ticket fl-right\" data-v-7f8e1624><span class=\"w-100 obj-center title-name-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span><span class=\"w-100 obj-end-center des-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span></span><span class=\"view-des-ticket fl-right\" data-v-7f8e1624><span class=\"w-100 obj-center title-name-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span><span class=\"w-100 obj-end-center des-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span></span><span class=\"price-and-buy  view-des-ticket fl-left\" style=\"background-color:unset;margin:0;\" data-v-7f8e1624><p class=\"f-20 al-center m-p set-font\" style=\"color:#EF2D2B;\" data-v-7f8e1624>12500000000</p><p class=\"f-16 al-center m-p set-font\" style=\"color:#FFD1D0;\" data-v-7f8e1624>تومان</p><a href=\"\" class=\"btn-buy-ticket set-font f-12\" data-v-7f8e1624>خرید</a></span></li><li class=\"vip\" data-v-7f8e1624><img class=\"fl-right\" src=\"/data/icon/mt.png\" alt=\"\" data-v-7f8e1624><span class=\"view-des-ticket fl-right\" data-v-7f8e1624><span class=\"w-100 obj-center title-name-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span><span class=\"w-100 obj-end-center des-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span></span><span class=\"view-des-ticket fl-right\" data-v-7f8e1624><span class=\"w-100 obj-center title-name-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span><span class=\"w-100 obj-end-center des-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span></span><span class=\"price-and-buy  view-des-ticket fl-left\" style=\"background-color:unset;margin:0;\" data-v-7f8e1624><p class=\"f-20 al-center m-p set-font\" style=\"color:#EF2D2B;\" data-v-7f8e1624>12500000000</p><p class=\"f-16 al-center m-p set-font\" style=\"color:#FFD1D0;\" data-v-7f8e1624>تومان</p><a href=\"\" class=\"btn-buy-ticket set-font f-12\" data-v-7f8e1624>خرید</a></span></li><li data-v-7f8e1624><img class=\"fl-right\" src=\"/data/icon/mt.png\" alt=\"\" data-v-7f8e1624><span class=\"view-des-ticket fl-right\" data-v-7f8e1624><span class=\"w-100 obj-center title-name-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span><span class=\"w-100 obj-end-center des-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span></span><span class=\"view-des-ticket fl-right\" data-v-7f8e1624><span class=\"w-100 obj-center title-name-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span><span class=\"w-100 obj-end-center des-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span></span><span class=\"price-and-buy  view-des-ticket fl-left\" style=\"background-color:unset;margin:0;\" data-v-7f8e1624><p class=\"f-20 al-center m-p set-font\" style=\"color:#EF2D2B;\" data-v-7f8e1624>12500000000</p><p class=\"f-16 al-center m-p set-font\" style=\"color:#FFD1D0;\" data-v-7f8e1624>تومان</p><a href=\"\" class=\"btn-buy-ticket set-font f-12\" data-v-7f8e1624>خرید</a></span></li></ul></span>", 2);
+
+(0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
+
+var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [_hoisted_2]);
 });
 
 /***/ }),
@@ -17008,7 +16793,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_test__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/test */ "./resources/js/components/test.vue");
 /* harmony import */ var _components_index_header_page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/index/header_page */ "./resources/js/components/index/header_page.vue");
 /* harmony import */ var _components_index_index_page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/index/index_page */ "./resources/js/components/index/index_page.vue");
+/* harmony import */ var _components_index_view_ticket__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/index/view_ticket */ "./resources/js/components/index/view_ticket.vue");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_7__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
+
 
 
 
@@ -17019,13 +16809,18 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 var app = (0,vue_dist_vue_esm_bundler_js__WEBPACK_IMPORTED_MODULE_2__.createApp)({
   data: function data() {
     return {
-      test: 'test'
+      test: 'test',
+      type_send: '1',
+      type_car: '1',
+      next: '2',
+      back: '1'
     };
   },
   components: {
     test: _components_test__WEBPACK_IMPORTED_MODULE_3__.default,
     header_page: _components_index_header_page__WEBPACK_IMPORTED_MODULE_4__.default,
-    index_page: _components_index_index_page__WEBPACK_IMPORTED_MODULE_5__.default
+    index_page: _components_index_index_page__WEBPACK_IMPORTED_MODULE_5__.default,
+    view_ticket: _components_index_view_ticket__WEBPACK_IMPORTED_MODULE_6__.default
   }
 });
 app.mount('#app'); // window.Vue = require('vue').default;
@@ -21572,7 +21367,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".header{\n    width: 100%;\n    height: 60px;\n    padding: 10px;\n    box-sizing: border-box;\n    box-shadow: 1px 1px 10px rgba(0,0,0,.2);\n}\n.header .icon-logo{\n    height: 100%;\n}\n.index-page-select-type-ticket{\n    width: 100%;\n    height:calc(100vh - 60px);\n}\n.checked{\n    background-color: #919191;\n    color: #000;\n}\n.group-select-type-ticket{\n    width: 100%;\n    height: auto;\n}\n.item-select-group{\n    width: 300px;\n    height: 150px;\n    padding: 20px;\n    margin: 0 10px;\n    box-sizing: border-box;\n    border-radius: 5px;\n    border: 1px solid #e0e0e0;\n}\n.label-radio-btn{\n    position: relative;\n    bottom: 3px;\n}\n.group-select-type-ticket{\n    margin: 10px 0;\n}\n.group-btn-send-ticket button{\n    padding: 8px 25px;\n    background-color: unset;\n    border: 1px solid #EF2D2B;\n    border-radius: 5px;\n    cursor: pointer;\n    transition: 0.2s;\n    color: #EF2D2B;\n    outline: none;\n}\n.group-btn-send-ticket button:hover{\n    background-color:#EF2D2B ;\n    color: #ffffff;\n}\n.group-select-type-ticket-select-input select{\n    padding: 5px 10px;\n    position: relative;\n    border: 1px solid #eaeaea;\n    border-radius: 5px;\n    outline: none;\n    right: 10px;\n}\n.icon-index-page img{\n    width: 180px!important;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".header{\n    width: 100%;\n    height: 60px;\n    padding: 10px;\n    box-sizing: border-box;\n    box-shadow: 1px 1px 10px rgba(0,0,0,.2);\n}\n.header .icon-logo{\n    height: 100%;\n}\n.index-page-select-type-ticket{\n    width: 100%;\n    height:calc(100vh - 60px);\n}\n.checked{\n    background-color: #919191;\n    color: #000;\n}\n.group-select-type-ticket{\n    width: 100%;\n    height: auto;\n}\n.item-select-group{\n    width: 300px;\n    height: 150px;\n    padding: 20px;\n    margin: 0 10px;\n    box-sizing: border-box;\n    border-radius: 5px;\n    border: 1px solid #e0e0e0;\n}\n.label-radio-btn{\n    position: relative;\n    bottom: 3px;\n}\n.group-select-type-ticket{\n    margin: 10px 0;\n}\n.group-btn-send-ticket button{\n    padding: 8px 25px;\n    background-color: unset;\n    border: 1px solid #EF2D2B;\n    border-radius: 5px;\n    cursor: pointer;\n    transition: 0.2s;\n    color: #EF2D2B;\n    outline: none;\n}\n.group-btn-send-ticket button:hover{\n    background-color:#EF2D2B ;\n    color: #ffffff;\n}\n.group-select-type-ticket-select-input select{\n    padding: 5px 10px;\n    position: relative;\n    border: 1px solid #eaeaea;\n    border-radius: 5px;\n    outline: none;\n    right: 10px;\n}\n.icon-index-page img{\n    width: 180px!important;\n}\n.group-item-ticket{\n    width: 100%;\n    padding: 10px;\n    box-sizing: border-box;\n    height: calc(100vh - 60px);\n}\n.part-filter{\n    width: 25%;\n    border-radius: 10px;\n    height: 100%;\n    padding: 10px;\n    box-sizing: border-box;\n    overflow-y: scroll;\n    border: 1px solid #d4d4d4;\n}\n.part-ticket{\n    width: 74%;\n    border-radius: 10px;\n    height: 100%;\n    padding: 10px;\n    box-sizing: border-box;\n    overflow-y: scroll;\n    border: 1px solid #d4d4d4;\n}\n::-webkit-scrollbar{\n    width: 7px;\n}\n::-webkit-scrollbar-thumb{\n    background-color: #dbdbdb;\n    border-radius: 100px;\n}\n.item-filter{\n    width: 100%;\n    padding: 10px;\n    margin: 10px 0;\n    box-sizing: border-box;\n    border-radius: 5px;\n    border: 1px solid #e3e3e3;\n}\n.item-filter select{\n    width: 100%;\n    padding: 10px 0;\n    outline: none;\n    box-sizing: border-box;\n    border: 1px solid #EF2D2B;\n    border-radius:10px;\n}\n.item-filter input{\n    width: 100%;\n    padding: 10px 10px;\n    outline: none;\n    margin: 10px 0;\n    box-sizing: border-box;\n    border: 1px solid #EF2D2B;\n    border-radius:10px;\n}\n.part-ticket li{\n    width: 100%;\n    padding: 15px;\n    height: 150px;\n    list-style: none;\n    margin: 25px 0;\n    box-sizing: border-box;\n    border-radius: 10px;\n    position: relative;\n    border: 1px solid #c3c3c3;\n}\n.part-ticket li img{\n    height: 100%;\n}\n.part-ticket .vip{\n    box-shadow: 1px 1px 10px rgb(241, 210, 12);\n    border: none!important;\n}\n.view-des-ticket{\n    padding: 10px 0;\n    min-width: 200px;\n    margin: 0 20px;\n    box-sizing: border-box;\n    height: 100%;\n    border-radius: 10px;\n    background-color: #f8f8f8;\n}\n.title-name-ticket p{\n    color:#EF2D2B ;\n}\n.btn-buy-ticket{\n    width: 100%;\n    display: block;\n    padding: 10px 0;\n    box-sizing: border-box;\n    background-color:#EF2D2B ;\n    color: white;\n    border: 1px solid #EF2D2B;\n    border-radius: 5px;\n    text-align: center;\n    transition: 0.2s;\n    margin: 10px 0;\n}\n.btn-buy-ticket:hover{\n    background-color: unset;\n    color:#EF2D2B ;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -52724,6 +52519,33 @@ _index_page_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default.__f
 
 /***/ }),
 
+/***/ "./resources/js/components/index/view_ticket.vue":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/index/view_ticket.vue ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _view_ticket_vue_vue_type_template_id_7f8e1624_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./view_ticket.vue?vue&type=template&id=7f8e1624&scoped=true */ "./resources/js/components/index/view_ticket.vue?vue&type=template&id=7f8e1624&scoped=true");
+/* harmony import */ var _view_ticket_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./view_ticket.vue?vue&type=script&lang=js */ "./resources/js/components/index/view_ticket.vue?vue&type=script&lang=js");
+
+
+
+_view_ticket_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default.render = _view_ticket_vue_vue_type_template_id_7f8e1624_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render
+_view_ticket_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default.__scopeId = "data-v-7f8e1624"
+/* hot reload */
+if (false) {}
+
+_view_ticket_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default.__file = "resources/js/components/index/view_ticket.vue"
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_view_ticket_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default);
+
+/***/ }),
+
 /***/ "./resources/js/components/test.vue":
 /*!******************************************!*\
   !*** ./resources/js/components/test.vue ***!
@@ -52783,6 +52605,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/index/view_ticket.vue?vue&type=script&lang=js":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/index/view_ticket.vue?vue&type=script&lang=js ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_view_ticket_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__.default)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_view_ticket_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./view_ticket.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/index/view_ticket.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
 /***/ "./resources/js/components/test.vue?vue&type=script&lang=js":
 /*!******************************************************************!*\
   !*** ./resources/js/components/test.vue?vue&type=script&lang=js ***!
@@ -52827,6 +52665,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_index_page_vue_vue_type_template_id_08801104_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_index_page_vue_vue_type_template_id_08801104_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./index_page.vue?vue&type=template&id=08801104&scoped=true */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/index/index_page.vue?vue&type=template&id=08801104&scoped=true");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/index/view_ticket.vue?vue&type=template&id=7f8e1624&scoped=true":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/components/index/view_ticket.vue?vue&type=template&id=7f8e1624&scoped=true ***!
+  \*************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_view_ticket_vue_vue_type_template_id_7f8e1624_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_view_ticket_vue_vue_type_template_id_7f8e1624_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./view_ticket.vue?vue&type=template&id=7f8e1624&scoped=true */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/index/view_ticket.vue?vue&type=template&id=7f8e1624&scoped=true");
 
 
 /***/ }),

@@ -61,3 +61,106 @@
 .icon-index-page img{
     width: 180px!important;
 }
+.group-item-ticket{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    height: calc(100vh - 60px);
+}
+.part-filter{
+    width: 25%;
+    border-radius: 10px;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    border: 1px solid #d4d4d4;
+}
+.part-ticket{
+    width: 74%;
+    border-radius: 10px;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    border: 1px solid #d4d4d4;
+}
+::-webkit-scrollbar{
+    width: 7px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #dbdbdb;
+    border-radius: 100px;
+}
+.item-filter{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #e3e3e3;
+}
+.item-filter select{
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    box-sizing: border-box;
+    border: 1px solid #EF2D2B;
+    border-radius:10px;
+}
+.item-filter input{
+    width: 100%;
+    padding: 10px 10px;
+    outline: none;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #EF2D2B;
+    border-radius:10px;
+}
+.part-ticket li{
+    width: 100%;
+    padding: 15px;
+    height: 150px;
+    list-style: none;
+    margin: 25px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid #c3c3c3;
+}
+.part-ticket li img{
+    height: 100%;
+}
+.part-ticket .vip{
+    box-shadow: 1px 1px 10px rgb(241, 210, 12);
+    border: none!important;
+}
+.view-des-ticket{
+    padding: 10px 0;
+    min-width: 200px;
+    margin: 0 20px;
+    box-sizing: border-box;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+}
+.title-name-ticket p{
+    color:#EF2D2B ;
+}
+.btn-buy-ticket{
+    width: 100%;
+    display: block;
+    padding: 10px 0;
+    box-sizing: border-box;
+    background-color:#EF2D2B ;
+    color: white;
+    border: 1px solid #EF2D2B;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.2s;
+    margin: 10px 0;
+}
+.btn-buy-ticket:hover{
+    background-color: unset;
+    color:#EF2D2B ;
+}

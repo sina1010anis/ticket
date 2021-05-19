@@ -10,5 +10,6 @@ class Data
     public function handle()
     {
         View::composer(['*'] , title::class);
+        View::composer(['*'] , city::class);
     }
 }

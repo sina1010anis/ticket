@@ -5,14 +5,21 @@ import {createApp} from 'vue/dist/vue.esm-bundler.js'
 import test from './components/test'
 import header_page from './components/index/header_page'
 import index_page from './components/index/index_page'
+import view_ticket from './components/index/view_ticket'
+import axios from 'axios'
 const app  = createApp({
     data:()=>({
         test:'test',
+        type_send: '1',
+        type_car: '1',
+        next: '2',
+        back: '1',
     }),
     components:{
         test,
         header_page:header_page,
         index_page,
+        view_ticket,
     }
 })
 
