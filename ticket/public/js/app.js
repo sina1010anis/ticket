@@ -16621,7 +16621,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "view_ticket"
+  name: "view_ticket",
+  props: ['data', 'titleFilter', 'send', 'ticket']
 });
 
 /***/ }),
@@ -16729,13 +16730,57 @@ var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("dat
 var _hoisted_1 = {
   "class": "group-item-ticket"
 };
+var _hoisted_2 = {
+  "class": "part-filter fl-right"
+};
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<span class=\"part-filter fl-right\" data-v-7f8e1624><h4 class=\"set-font color-b-600 al-right\" data-v-7f8e1624>فیلتر</h4><span class=\"line fl-right\" data-v-7f8e1624></span><span class=\"item-filter fl-right\" data-v-7f8e1624><h5 class=\"set-font color-b-600 al-right m-p\" data-v-7f8e1624>تاریخ</h5><span class=\"line fl-right\" data-v-7f8e1624></span><input class=\"set-font color-b-600 al-right\" type=\"text\" placeholder=\"تاریخ رفت\" data-v-7f8e1624><input class=\"set-font color-b-600 al-right\" type=\"text\" placeholder=\"تاریخ برگشت\" data-v-7f8e1624></span><span class=\"item-filter fl-right\" data-v-7f8e1624><h5 class=\"set-font color-b-600 al-right m-p\" data-v-7f8e1624>نوع سفر</h5><span class=\"line fl-right\" data-v-7f8e1624></span><select class=\"set-font color-b-600\" name=\"item_filter\" data-v-7f8e1624><option value=\"1\" data-v-7f8e1624>test</option><option value=\"1\" data-v-7f8e1624>test</option><option value=\"1\" data-v-7f8e1624>test</option><option value=\"1\" data-v-7f8e1624>test</option><option value=\"1\" data-v-7f8e1624>test</option><option value=\"1\" data-v-7f8e1624>test</option><option value=\"1\" data-v-7f8e1624>test</option><option value=\"1\" data-v-7f8e1624>test</option><option value=\"1\" data-v-7f8e1624>test</option><option value=\"1\" data-v-7f8e1624>test</option></select></span></span><span class=\"part-ticket fl-left\" data-v-7f8e1624><ul class=\"m-p\" data-v-7f8e1624><li class=\"vip\" data-v-7f8e1624><img class=\"fl-right\" src=\"/data/icon/mt.png\" alt=\"\" data-v-7f8e1624><span class=\"view-des-ticket fl-right\" data-v-7f8e1624><span class=\"w-100 obj-center title-name-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span><span class=\"w-100 obj-end-center des-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span></span><span class=\"view-des-ticket fl-right\" data-v-7f8e1624><span class=\"w-100 obj-center title-name-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span><span class=\"w-100 obj-end-center des-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span></span><span class=\"price-and-buy  view-des-ticket fl-left\" style=\"background-color:unset;margin:0;\" data-v-7f8e1624><p class=\"f-20 al-center m-p set-font\" style=\"color:#EF2D2B;\" data-v-7f8e1624>12500000000</p><p class=\"f-16 al-center m-p set-font\" style=\"color:#FFD1D0;\" data-v-7f8e1624>تومان</p><a href=\"\" class=\"btn-buy-ticket set-font f-12\" data-v-7f8e1624>خرید</a></span></li><li data-v-7f8e1624><img class=\"fl-right\" src=\"/data/icon/mt.png\" alt=\"\" data-v-7f8e1624><span class=\"view-des-ticket fl-right\" data-v-7f8e1624><span class=\"w-100 obj-center title-name-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span><span class=\"w-100 obj-end-center des-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span></span><span class=\"view-des-ticket fl-right\" data-v-7f8e1624><span class=\"w-100 obj-center title-name-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span><span class=\"w-100 obj-end-center des-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span></span><span class=\"price-and-buy  view-des-ticket fl-left\" style=\"background-color:unset;margin:0;\" data-v-7f8e1624><p class=\"f-20 al-center m-p set-font\" style=\"color:#EF2D2B;\" data-v-7f8e1624>12500000000</p><p class=\"f-16 al-center m-p set-font\" style=\"color:#FFD1D0;\" data-v-7f8e1624>تومان</p><a href=\"\" class=\"btn-buy-ticket set-font f-12\" data-v-7f8e1624>خرید</a></span></li><li class=\"vip\" data-v-7f8e1624><img class=\"fl-right\" src=\"/data/icon/mt.png\" alt=\"\" data-v-7f8e1624><span class=\"view-des-ticket fl-right\" data-v-7f8e1624><span class=\"w-100 obj-center title-name-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span><span class=\"w-100 obj-end-center des-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span></span><span class=\"view-des-ticket fl-right\" data-v-7f8e1624><span class=\"w-100 obj-center title-name-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span><span class=\"w-100 obj-end-center des-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span></span><span class=\"price-and-buy  view-des-ticket fl-left\" style=\"background-color:unset;margin:0;\" data-v-7f8e1624><p class=\"f-20 al-center m-p set-font\" style=\"color:#EF2D2B;\" data-v-7f8e1624>12500000000</p><p class=\"f-16 al-center m-p set-font\" style=\"color:#FFD1D0;\" data-v-7f8e1624>تومان</p><a href=\"\" class=\"btn-buy-ticket set-font f-12\" data-v-7f8e1624>خرید</a></span></li><li data-v-7f8e1624><img class=\"fl-right\" src=\"/data/icon/mt.png\" alt=\"\" data-v-7f8e1624><span class=\"view-des-ticket fl-right\" data-v-7f8e1624><span class=\"w-100 obj-center title-name-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span><span class=\"w-100 obj-end-center des-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span></span><span class=\"view-des-ticket fl-right\" data-v-7f8e1624><span class=\"w-100 obj-center title-name-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span><span class=\"w-100 obj-end-center des-ticket\" data-v-7f8e1624><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p><p class=\"set-font f-12 al-center\" data-v-7f8e1624>نوع قطار SMD</p></span></span><span class=\"price-and-buy  view-des-ticket fl-left\" style=\"background-color:unset;margin:0;\" data-v-7f8e1624><p class=\"f-20 al-center m-p set-font\" style=\"color:#EF2D2B;\" data-v-7f8e1624>12500000000</p><p class=\"f-16 al-center m-p set-font\" style=\"color:#FFD1D0;\" data-v-7f8e1624>تومان</p><a href=\"\" class=\"btn-buy-ticket set-font f-12\" data-v-7f8e1624>خرید</a></span></li></ul></span>", 2);
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h4", {
+  "class": "set-font color-b-600 al-right"
+}, "فیلتر", -1
+/* HOISTED */
+);
+
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
+  "class": "line fl-right"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_5 = {
+  "class": "item-filter fl-right"
+};
+
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h5", {
+  "class": "set-font color-b-600 al-right m-p"
+}, "تاریخ", -1
+/* HOISTED */
+);
+
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
+  "class": "line fl-right"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
+  "class": "set-font color-b-600 al-right",
+  type: "text",
+  placeholder: "تاریخ رفت"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_9 = {
+  key: 0,
+  "class": "set-font color-b-600 al-right",
+  type: "text",
+  placeholder: "تاریخ برگشت"
+};
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [_hoisted_2]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", _hoisted_2, [_hoisted_3, _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", _hoisted_5, [_hoisted_6, _hoisted_7, _hoisted_8, $props.send == '2' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("input", _hoisted_9)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "filter")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "show_ticket")]);
 });
 
 /***/ }),
