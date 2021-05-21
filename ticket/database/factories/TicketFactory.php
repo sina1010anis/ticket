@@ -27,8 +27,8 @@ class TicketFactory extends Factory
             'city_id_back' => rand(1,20),
             'city_id_next' =>  rand(1,20),
             'way' => rand(1,2),
-            'date_went' => '1400/'.rand(1,12).'/'.rand(1,31),
-            'date_return' => '1400/'.rand(1,12).'/'.rand(1,31),
+            'date_went' => '1400-'.rand(1,12).'-'.rand(1,31),
+            'date_return' => '1400-'.rand(1,12).'-'.rand(1,31),
             'ticket_type' =>rand(1,2),
             'transportation_type' =>rand(1,3),
         ];

@@ -4,9 +4,12 @@
     <list default="true" id="af515348-b180-475e-a4c8-8cae75cbc9e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/TicketFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/TicketFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/index/view_ticket.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/index/view_ticket.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/section/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/section/view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +187,8 @@
       <workItem from="1621340632058" duration="5700000" />
       <workItem from="1621398271570" duration="7273000" />
       <workItem from="1621426857038" duration="11220000" />
-      <workItem from="1621488728999" duration="5499000" />
+      <workItem from="1621488728999" duration="5846000" />
+      <workItem from="1621598032356" duration="6879000" />
     </task>
     <servers />
   </component>

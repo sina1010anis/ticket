@@ -15,6 +15,7 @@ use App\Http\Controllers\IndexController;
 
 Route::get('/', [IndexController::class , 'index'])->name('front.home');
 Route::post('/view/ticket', [IndexController::class , 'viewTicket'])->name('front.viewTicket');
+Route::get('/test', [IndexController::class , 'test'])->name('test');
 
 Auth::routes();
 

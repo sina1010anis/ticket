@@ -16,9 +16,9 @@
                         <span class="item-filter fl-right">
                             <h5 class="set-font color-b-600 al-right m-p">{{$i->name}}</h5>
                             <span class="line fl-right"></span>
-                            <select class="set-font color-b-600" name="item_filter">
+                            <select @change="search_name_ticket" class="set-font color-b-600" name="item_filter">
                                 @foreach($ticket as $ii)
-                                    <option value="{{$ii->id}}">{{$ii->name}}</option>
+                                    <option value="{{$ii->name}}">{{$ii->name}}</option>
                                 @endforeach
                             </select>
                         </span>
@@ -36,7 +36,7 @@
                     <span class="part-ticket fl-left">
                         <ul class="m-p">
                     @foreach($ticket as $i)
-                        <li>
+                        <li class="{{$i->date_went}}" id="{{$i->name}}">
                             @if($i->transportation_type == '1')
                                 <img class="fl-right" src="{{url('data/icon/pr.png')}}" alt="">
                             @endif
@@ -66,8 +66,10 @@
                                 </span>
                                 <span class="w-100 obj-end-center des-ticket">
                                     <p class="set-font f-12 al-center">{{$i->date_went}}</p>
-                                    @if($i->date_went == 'null')
-                                        <p class="set-font f-12 al-center"></p>
+                                    @if($i->date_return == '0')
+                                        <p style="display: none" class="set-font f-12 al-center"></p>
+                                    @else
+                                        <p class="set-font f-12 al-center">{{$i->date_return}}</p>
                                     @endif
                                 </span>
                             </span>
