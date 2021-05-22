@@ -20,7 +20,8 @@ export default {
         'city'
     ],
     methods: {
-    }
+    },
+
 }
 </script>
 
