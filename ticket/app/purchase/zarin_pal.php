@@ -7,19 +7,22 @@ use Zarinpal\Zarinpal;
 class zarin_pal implements Bank
 {
     public $id ;
+    public $price ;
     public function __construct($id)
     {
         return $this->id = $id;
     }
-
-    public function send($price)
+    public function price($price){
+        $this->price = $price;
+    }
+    public function send()
     {
         $zarinpal = new Zarinpal($this->id);
         //$zarinpal->enableSandbox();
         $zarinpal->isZarinGate();
         $results = $zarinpal->request(
             route('verifyPay'),
-            $price,
+            $this->price,
             'testing',
             'me@example.com',
             '09000000000',
@@ -35,16 +38,8 @@ class zarin_pal implements Bank
     {
         $zarinpal = new Zarinpal($this->id);
         $authority = file_get_contents('Authority');
-        $ms = $zarinpal->verify('OK', $price, $authority);
-        if ($ms['Status'] == 'success'){
-            echo 'ok';
-        }else{
-            echo 'no';
-        }
-/*        if ($_POST['Status']=='OK'){
-            print_r($zarinpal->verify('OK', $price, $authority));
-        }else{
-            echo 'NO';
-        }*/
+        echo '<pre>';
+        print_r($zarinpal->verify('OK',$price, $authority));
+        echo '</pre>';
     }
 }

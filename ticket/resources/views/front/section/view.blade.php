@@ -77,7 +77,7 @@
                                   style="background-color: unset;margin: 0">
                                 <p class="f-20 al-center m-p set-font" style="color: #EF2D2B">{{$i->price}}</p>
                                 <p class="f-16 al-center m-p set-font" style="color: #FFD1D0">تومان</p>
-                                <a href="#" class="btn-buy-ticket set-font f-12">خرید</a>
+                                <a href="{{route('sendPay' , $i->id)}}" class="btn-buy-ticket set-font f-12">خرید</a>
                             </span>
                         </li>
                     @endforeach

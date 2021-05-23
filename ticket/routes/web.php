@@ -16,6 +16,7 @@ use App\Http\Controllers\IndexController;
 Route::get('/', [IndexController::class , 'index'])->name('front.home');
 Route::post('/view/ticket', [IndexController::class , 'viewTicket'])->name('front.viewTicket');
 Route::get('/test', [IndexController::class , 'test'])->name('test');
+Route::get('/sendPay/{id}', [IndexController::class , 'sendPay'])->name('sendPay');
 Route::get('/verifyPay', [IndexController::class , 'verifyPay'])->name('verifyPay');
 
 Auth::routes();

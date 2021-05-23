@@ -6,6 +6,7 @@ namespace App\purchase;
 
 interface Bank
 {
-    public function send($price);
+    public function send();
     public function verify($price);
+    public function price($price);
 }
