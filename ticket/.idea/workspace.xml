@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af515348-b180-475e-a4c8-8cae75cbc9e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Repository/Index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/T1/Auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/T1/Loger.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/T1/Logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/T1/Register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/T1/Verify.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/T2/AbstractClass.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/T2/CarInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/T2/CarOne.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/T2/CarTow.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
     </list>
@@ -154,6 +162,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.PHP" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -162,15 +171,28 @@
       <recent name="C:\wamp64\www\s1\ticket\resources\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\s1\ticket\app\pattern\T1" />
       <recent name="C:\wamp64\www\s1\ticket" />
       <recent name="C:\wamp64\www\s1\ticket\public\data\icon" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.IndexController.test">
+    <configuration name="IndexController.test" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\Http\Controllers\IndexController" file="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" method="test" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <configuration name="Verify.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" singleton="false" path="$PROJECT_DIR$/app/pattern/T1/Verify.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.IndexController.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -192,7 +214,7 @@
       <workItem from="1621692205091" duration="788000" />
       <workItem from="1621693044643" duration="2643000" />
       <workItem from="1621744563848" duration="4231000" />
-      <workItem from="1621860196632" duration="1069000" />
+      <workItem from="1621860196632" duration="9239000" />
     </task>
     <servers />
   </component>
