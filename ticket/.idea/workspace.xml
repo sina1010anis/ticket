@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af515348-b180-475e-a4c8-8cae75cbc9e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/pattern/T1/Auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/T1/Loger.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/T1/Logout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/T1/Register.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/T1/Verify.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/T2/AbstractClass.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/T2/CarInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/T2/CarOne.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/T2/CarTow.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Builder/Car_Bind.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Builder/Car_Builder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Builder/CreateCarInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Builder/Product/CarOne_Builder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Builder/Product/CarTow_Builder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pattern/abstractFactory/AbstractClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pattern/AbstractFactory/AbstractClass.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pattern/abstractFactory/CarInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pattern/AbstractFactory/CarInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pattern/abstractFactory/CarOne.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pattern/AbstractFactory/CarOne.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pattern/abstractFactory/CarTow.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pattern/AbstractFactory/CarTow.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,10 +177,6 @@
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.IndexController.test">
-    <configuration name="IndexController.test" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="App\Http\Controllers\IndexController" file="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" method="test" scope="Method" />
-      <method v="2" />
-    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -215,6 +211,7 @@
       <workItem from="1621693044643" duration="2643000" />
       <workItem from="1621744563848" duration="4231000" />
       <workItem from="1621860196632" duration="9239000" />
+      <workItem from="1621916690729" duration="5439000" />
     </task>
     <servers />
   </component>

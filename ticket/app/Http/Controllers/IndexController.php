@@ -4,11 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\buy;
 use App\Models\ticket;
+use App\pattern\Builder\Car_Bind;
+use App\pattern\Builder\Car_Builder;
+use App\pattern\Builder\Product\CarOne_Builder;
 use App\pattern\T1\Logout;
 use App\pattern\T1\Register;
 use App\pattern\T1\Verify;
-use App\pattern\abstractFactory\AbstractClass;
-use App\pattern\abstractFactory\CarOne;
+use App\pattern\AbstractFactory\AbstractClass;
+use App\pattern\AbstractFactory\CarOne;
 use App\purchase\Bank;
 use App\Repository\Index;
 use Illuminate\Http\Request;
@@ -40,9 +43,19 @@ class IndexController extends TestCase
 
 
     public function test(){
+        /*
+        // abstract factory
         $abstractClass = new AbstractClass(5000000);
         $myCar = $abstractClass->CreateCarOne();
         echo $myCar->CarClass();
+        */
+
+        // builder
+        $builder = new Car_Bind(new Car_Builder());
+        echo '<pre>';
+        print_r($builder->CarShow());
+        echo '</pre>';
+
     }
 
 

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\pattern\abstractFactory;
+namespace App\pattern\AbstractFactory;
 
 
 class CarOne implements CarInterface
