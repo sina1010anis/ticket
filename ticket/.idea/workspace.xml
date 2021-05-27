@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af515348-b180-475e-a4c8-8cae75cbc9e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/pattern/SimpleFactory/ItemOne.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/SimpleFactory/ItemTow.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/SimpleFactory/SimpleFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/SimpleFactory/SimpleInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Adapter/CarBenzAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Adapter/CarBmwAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Adapter/InterfaceCarBenz.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Adapter/InterfaceCarBmw.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/StaticFactory/ClassStaticFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/StaticFactory/StaticFactoryCarOne.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/StaticFactory/StaticFactoryCarTow.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/StaticFactory/StaticFactoryInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
     </list>
@@ -216,7 +220,8 @@
       <workItem from="1622005111350" duration="2850000" />
       <workItem from="1622040405094" duration="3336000" />
       <workItem from="1622093312674" duration="2109000" />
-      <workItem from="1622119151848" duration="589000" />
+      <workItem from="1622119151848" duration="4732000" />
+      <workItem from="1622141607970" duration="742000" />
     </task>
     <servers />
   </component>

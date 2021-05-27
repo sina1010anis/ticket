@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\buy;
 use App\Models\ticket;
+use App\pattern\Adapter\CarBenzAdapter;
 use App\pattern\Builder\Car_Bind;
 use App\pattern\Builder\Car_Builder;
 use App\pattern\Builder\Product\CarOne_Builder;
@@ -13,6 +14,9 @@ use App\pattern\ProtoType\Author;
 use App\pattern\ProtoType\Page;
 use App\pattern\SimpleFactory\ItemOne;
 use App\pattern\SimpleFactory\SimpleFactory;
+use App\pattern\StaticFactory\ClassStaticFactory;
+use App\pattern\StaticFactory\StaticFactoryCarOne;
+use App\pattern\StaticFactory\StaticFactoryCarTow;
 use App\pattern\T1\Logout;
 use App\pattern\T1\Register;
 use App\pattern\T1\Verify;
@@ -55,17 +59,19 @@ class IndexController extends Controller
         $myCar = $abstractClass->CreateCarOne();
         echo $myCar->CarClass();
         */
-
+        //--------------------------------------------------------------------------------
         // builder
 /*        $builder = new Car_Bind(new Car_Builder());
         echo '<pre>';
         print_r($builder->CarShow());
         echo '</pre>';*/
+        //--------------------------------------------------------------------------------
 
         //factory method
 /*        $factory = new FactorYModel_SDS();
         $model_factory = $factory->ShowModel();
         echo $model_factory->setModel();*/
+        //--------------------------------------------------------------------------------
 
         // proto type
 /*        $author = new Author();
@@ -79,12 +85,22 @@ class IndexController extends Controller
         echo '<pre>';
         print_r($df);
         echo '</pre>';*/
+        //--------------------------------------------------------------------------------
 
         //Simple Factory
 /*        $simple = new SimpleFactory();
         $class = $simple->classItem(new ItemOne('Type 5'));
         echo $class->ItemClass();*/
+        //--------------------------------------------------------------------------------
 
+        //Static Factory
+        /*return ClassStaticFactory::StaticFactory(new StaticFactoryCarTow());*/
+        //--------------------------------------------------------------------------------
+
+        // Adapter
+
+        $adapter = new CarBenzAdapter();
+        return $adapter->Model_S();
     }
 
 
