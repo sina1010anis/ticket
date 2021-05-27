@@ -11,6 +11,8 @@ use App\pattern\FactoryMethod\FactorYModel_MT1;
 use App\pattern\FactoryMethod\FactorYModel_SDS;
 use App\pattern\ProtoType\Author;
 use App\pattern\ProtoType\Page;
+use App\pattern\SimpleFactory\ItemOne;
+use App\pattern\SimpleFactory\SimpleFactory;
 use App\pattern\T1\Logout;
 use App\pattern\T1\Register;
 use App\pattern\T1\Verify;
@@ -66,7 +68,7 @@ class IndexController extends Controller
         echo $model_factory->setModel();*/
 
         // proto type
-        $author = new Author();
+/*        $author = new Author();
         $page = new Page('AY test','lorem test in page proto type',$author);
         $author->userName('sina');
         for ($i=0;$i<5;$i++){
@@ -76,7 +78,13 @@ class IndexController extends Controller
         $page->setComment('User NAme'.rand(10,20));
         echo '<pre>';
         print_r($df);
-        echo '</pre>';
+        echo '</pre>';*/
+
+        //Simple Factory
+/*        $simple = new SimpleFactory();
+        $class = $simple->classItem(new ItemOne('Type 5'));
+        echo $class->ItemClass();*/
+
     }
 
 
