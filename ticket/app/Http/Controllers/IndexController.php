@@ -7,6 +7,10 @@ use App\Models\ticket;
 use App\pattern\Builder\Car_Bind;
 use App\pattern\Builder\Car_Builder;
 use App\pattern\Builder\Product\CarOne_Builder;
+use App\pattern\FactoryMethod\FactorYModel_MT1;
+use App\pattern\FactoryMethod\FactorYModel_SDS;
+use App\pattern\ProtoType\Author;
+use App\pattern\ProtoType\Page;
 use App\pattern\T1\Logout;
 use App\pattern\T1\Register;
 use App\pattern\T1\Verify;
@@ -17,7 +21,7 @@ use App\Repository\Index;
 use Illuminate\Http\Request;
 use PHPUnit\Framework\TestCase;
 
-class IndexController extends TestCase
+class IndexController extends Controller
 {
     public $rep;
     public function __construct(Index $index)
@@ -51,11 +55,28 @@ class IndexController extends TestCase
         */
 
         // builder
-        $builder = new Car_Bind(new Car_Builder());
+/*        $builder = new Car_Bind(new Car_Builder());
         echo '<pre>';
         print_r($builder->CarShow());
-        echo '</pre>';
+        echo '</pre>';*/
 
+        //factory method
+/*        $factory = new FactorYModel_SDS();
+        $model_factory = $factory->ShowModel();
+        echo $model_factory->setModel();*/
+
+        // proto type
+        $author = new Author();
+        $page = new Page('AY test','lorem test in page proto type',$author);
+        $author->userName('sina');
+        for ($i=0;$i<5;$i++){
+            $page->setComment('User NAme'.rand(10,20));
+        }
+        $df = clone $page;
+        $page->setComment('User NAme'.rand(10,20));
+        echo '<pre>';
+        print_r($df);
+        echo '</pre>';
     }
 
 

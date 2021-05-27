@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af515348-b180-475e-a4c8-8cae75cbc9e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/pattern/Builder/Car_Bind.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/Builder/Car_Builder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/Builder/CreateCarInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/Builder/Product/CarOne_Builder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/Builder/Product/CarTow_Builder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/FactoryMethod/FactorYModel_MT1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/FactoryMethod/FactorYModel_SDS.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/FactoryMethod/Factory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/FactoryMethod/FactoryAbstract.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/FactoryMethod/Model_MT1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/FactoryMethod/Model_SDS.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/ProtoType/Author.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/ProtoType/Page.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/ProtoType/abstractProtoType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/IndexController_test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/IndexController_test.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pattern/abstractFactory/AbstractClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pattern/AbstractFactory/AbstractClass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pattern/abstractFactory/CarInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pattern/AbstractFactory/CarInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pattern/abstractFactory/CarOne.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pattern/AbstractFactory/CarOne.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pattern/abstractFactory/CarTow.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pattern/AbstractFactory/CarTow.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
@@ -154,7 +155,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/pattern/FactoryMethod" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -163,11 +164,12 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.PHP" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\s1\ticket\app\pattern\FactoryMethod" />
       <recent name="C:\wamp64\www\s1\ticket\resources\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -176,9 +178,13 @@
       <recent name="C:\wamp64\www\s1\ticket\public\data\icon" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.IndexController.test">
+  <component name="RunManager" selected="PHPUnit.TS.test">
+    <configuration name="TS.test" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\pattern\TS" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/app/pattern/TS.php" method="test" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner scope="XML" />
+      <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="XML" />
       <method v="2" />
     </configuration>
     <configuration name="Verify.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" singleton="false" path="$PROJECT_DIR$/app/pattern/T1/Verify.php">
@@ -186,7 +192,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.IndexController.test" />
+        <item itemvalue="PHPUnit.TS.test" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +217,10 @@
       <workItem from="1621693044643" duration="2643000" />
       <workItem from="1621744563848" duration="4231000" />
       <workItem from="1621860196632" duration="9239000" />
-      <workItem from="1621916690729" duration="5439000" />
+      <workItem from="1621916690729" duration="5993000" />
+      <workItem from="1621944983108" duration="6288000" />
+      <workItem from="1622005111350" duration="2850000" />
+      <workItem from="1622040405094" duration="3336000" />
     </task>
     <servers />
   </component>
@@ -229,5 +238,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

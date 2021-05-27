@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="IndexController.test" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" singleton="false">
-    <TestRunner class="App\Http\Controllers\IndexController" coverage_engine="PHPDBG" file="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" method="test" scope="Method" />
+    <TestRunner class="App\Http\Controllers\IndexController" configuration_file="$PROJECT_DIR$/phpunit.xml" coverage_engine="PHPDBG" file="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" method="test" scope="Method" />
     <method v="2" />
   </configuration>
 </component>
