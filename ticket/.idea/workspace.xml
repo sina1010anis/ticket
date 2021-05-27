@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af515348-b180-475e-a4c8-8cae75cbc9e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/pattern/Adapter/CarBenzAdapter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/Adapter/CarBmwAdapter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/Adapter/InterfaceCarBenz.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/Adapter/InterfaceCarBmw.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/StaticFactory/ClassStaticFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/StaticFactory/StaticFactoryCarOne.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/StaticFactory/StaticFactoryCarTow.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/StaticFactory/StaticFactoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Str/PrintJson/PrintJson.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/TestProject/OrderPizza/DriveSendOrder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/TestProject/OrderPizza/Factory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/TestProject/OrderPizza/InstallOrder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/TestProject/OrderPizza/Kitchen.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/TestProject/OrderPizza/KitchenInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/TestProject/OrderPizza/OrderPizza.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/TestProject/OrderPizza/Post.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/TestProject/OrderPizza/Reception.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +223,7 @@
       <workItem from="1622040405094" duration="3336000" />
       <workItem from="1622093312674" duration="2109000" />
       <workItem from="1622119151848" duration="4732000" />
-      <workItem from="1622141607970" duration="742000" />
+      <workItem from="1622141607970" duration="4572000" />
     </task>
     <servers />
   </component>

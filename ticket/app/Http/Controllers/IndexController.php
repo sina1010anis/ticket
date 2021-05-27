@@ -22,9 +22,14 @@ use App\pattern\T1\Register;
 use App\pattern\T1\Verify;
 use App\pattern\AbstractFactory\AbstractClass;
 use App\pattern\AbstractFactory\CarOne;
+use App\pattern\TestProject\OrderPizza\Factory;
+use App\pattern\TestProject\OrderPizza\InstallOrder;
+use App\pattern\TestProject\OrderPizza\Kitchen;
+use App\pattern\TestProject\OrderPizza\Reception;
 use App\purchase\Bank;
 use App\Repository\Index;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use PHPUnit\Framework\TestCase;
 
 class IndexController extends Controller
@@ -99,8 +104,14 @@ class IndexController extends Controller
 
         // Adapter
 
-        $adapter = new CarBenzAdapter();
-        return $adapter->Model_S();
+/*        $adapter = new CarBenzAdapter();
+        return $adapter->Model_S();*/
+
+        //---------------------------------------------------------------------------------
+
+        //Project OrderPizza
+/*        $order = new Factory();
+        Str::JSON_P($order->Pizza());*/
     }
 
 
