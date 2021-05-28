@@ -2,18 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af515348-b180-475e-a4c8-8cae75cbc9e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Str/PrintJson/PrintJson.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/TestProject/OrderPizza/DriveSendOrder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/TestProject/OrderPizza/Factory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/TestProject/OrderPizza/InstallOrder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/TestProject/OrderPizza/Kitchen.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/TestProject/OrderPizza/KitchenInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/TestProject/OrderPizza/OrderPizza.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/TestProject/OrderPizza/Post.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/TestProject/OrderPizza/Reception.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Bridge/CarColor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Bridge/CarModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Bridge/CarOne.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Bridge/CarTow.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Bridge/ColorBlue.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Bridge/ColorRed.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Bridge/FactoryClassPatternBridge.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/TestProject/FunctionClass/Arrey/DeleteNumber/DeleteNumberClass.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/TestProject/FunctionClass/Arrey/DeleteNumber/DeleteNumberInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Vue Single File Component" />
+        <option value="package.json" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -155,7 +157,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/pattern/FactoryMethod" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/pattern/Bridge" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -165,10 +167,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
+    <property name="ts.external.directory.path" value="D:\PhpStorm 2021.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\s1\ticket\app\pattern\Bridge" />
       <recent name="C:\wamp64\www\s1\ticket\app\pattern\FactoryMethod" />
       <recent name="C:\wamp64\www\s1\ticket\resources\css" />
     </key>
@@ -223,7 +227,11 @@
       <workItem from="1622040405094" duration="3336000" />
       <workItem from="1622093312674" duration="2109000" />
       <workItem from="1622119151848" duration="4732000" />
-      <workItem from="1622141607970" duration="4572000" />
+      <workItem from="1622141607970" duration="4802000" />
+      <workItem from="1622179540782" duration="2876000" />
+      <workItem from="1622188216321" duration="5938000" />
+      <workItem from="1622201361027" duration="1801000" />
+      <workItem from="1622209340648" duration="2613000" />
     </task>
     <servers />
   </component>
