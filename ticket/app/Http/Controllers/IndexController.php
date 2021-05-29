@@ -11,6 +11,9 @@ use App\pattern\Bridge\ColorRed;
 use App\pattern\Builder\Car_Bind;
 use App\pattern\Builder\Car_Builder;
 use App\pattern\Builder\Product\CarOne_Builder;
+use App\pattern\Composite\Card;
+use App\pattern\Composite\LapTap;
+use App\pattern\Composite\Mobile;
 use App\pattern\FactoryMethod\FactorYModel_MT1;
 use App\pattern\FactoryMethod\FactorYModel_SDS;
 use App\pattern\ProtoType\Author;
@@ -112,21 +115,21 @@ class IndexController extends Controller
         //Project OrderPizza
         /*        $order = new Factory();
                 Str::JSON_P($order->Pizza());*/
-
+        //--------------------------------------------------------------------------------
         // bridge
         /*        $model = (new \App\pattern\Bridge\FactoryClassPatternBridge())->GetCar(new \App\pattern\Bridge\CarTow() , new ColorBlue());
                 Str::JSON_P($model);*/
-        $numbers = [1, 8, 9, 2, 6, 8, 9, 4, 2, 1, 5];
-        for ($i = 0; $i < count($numbers); $i++) {
-            for ($j = 0; $j < count($numbers); $j++) {
-                if ($i != $j) {
-                    if ($numbers[$i] === $numbers[$j]) {
-                        $numbers[$j] = 'delete';
-                    }
-                }
-            }
-        }
-        Str::JSON_P($numbers);
+        //--------------------------------------------------------------------------------
+
+        // Composite
+        $composite = new Card();
+        $composite->addItem(new LapTap('HP envy 15 K008'));
+        $composite->addItem(new Mobile('Samsung A5 2016'));
+        $emit = new Card();
+        $emit->addItem(new LapTap('Lenovo Z51-70'));
+        $emit->addItem(new Mobile('HONOR X5'));
+        $emit->addItem($emit);
+        $emit->ModelProduct();
     }
 
 
@@ -141,5 +144,10 @@ class IndexController extends Controller
     {
         $price = buy::orderBy('id', 'desc')->whereUser_id(5)->first();
         $bank->verify($price->total_price);
+    }
+
+    public function axiosTest(Request $request)
+    {
+        return $request->name;
     }
 }

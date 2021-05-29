@@ -18,6 +18,7 @@ Route::post('/view/ticket', [IndexController::class , 'viewTicket'])->name('fron
 Route::get('/test', [IndexController::class , 'test'])->name('test');
 Route::get('/sendPay/{id}', [IndexController::class , 'sendPay'])->name('sendPay');
 Route::get('/verifyPay', [IndexController::class , 'verifyPay'])->name('verifyPay');
+Route::post('/axiosTest', [IndexController::class , 'axiosTest'])->name('axiosTest');
 
 Auth::routes();
 
