@@ -123,13 +123,12 @@ class IndexController extends Controller
 
         // Composite
         $composite = new Card();
-        $composite->addItem(new LapTap('HP envy 15 K008'));
-        $composite->addItem(new Mobile('Samsung A5 2016'));
+        $composite->addItem(new LapTap('HP envy 15 K008' , 150000));
+        $composite->addItem(new Mobile('Samsung A5 2016' , 90000));
         $emit = new Card();
-        $emit->addItem(new LapTap('Lenovo Z51-70'));
-        $emit->addItem(new Mobile('HONOR X5'));
-        $emit->addItem($emit);
-        $emit->ModelProduct();
+        $emit->addItem(new LapTap('Lenovo Z51-70' , 14500000));
+        $emit->addItem(new Mobile('HONOR X5' , 4000000));
+        return $emit->GetName() . '               ' . 'total price = ' . $emit->GetPrice();
     }
 
 
