@@ -14,6 +14,7 @@ use App\pattern\Builder\Product\CarOne_Builder;
 use App\pattern\Composite\Card;
 use App\pattern\Composite\LapTap;
 use App\pattern\Composite\Mobile;
+use App\pattern\Composite\Packaged;
 use App\pattern\FactoryMethod\FactorYModel_MT1;
 use App\pattern\FactoryMethod\FactorYModel_SDS;
 use App\pattern\ProtoType\Author;
@@ -123,12 +124,11 @@ class IndexController extends Controller
 
         // Composite
         $composite = new Card();
-        $composite->addItem(new LapTap('HP envy 15 K008' , 150000));
-        $composite->addItem(new Mobile('Samsung A5 2016' , 90000));
-        $emit = new Card();
-        $emit->addItem(new LapTap('Lenovo Z51-70' , 14500000));
-        $emit->addItem(new Mobile('HONOR X5' , 4000000));
-        return $emit->GetName() . '               ' . 'total price = ' . $emit->GetPrice();
+        $boxing = new Packaged();
+        $composite->addItem(new LapTap('HP envy 15 K008' , 5000));
+        $composite->addItem(new Mobile('Samsung A5 2016' , 5000));
+        $boxing->BoxingPrice($composite->GetPrice());
+        return $composite->GetName() . '/////////////////' . 'total price = ' . $composite->GetPrice().'////////////////// '.'Price Send Product ='.$boxing->GetPriceBoxing() ;
     }
 
 

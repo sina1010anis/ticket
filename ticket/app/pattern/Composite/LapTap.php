@@ -8,9 +8,9 @@ class LapTap implements ProductInterface
 {
     public $name;
     public $price;
-    public function __construct($sss , $price)
+    public function __construct($name , $price)
     {
-        $this->name = $sss;
+        $this->name = $name;
         $this->price = $price;
     }
 

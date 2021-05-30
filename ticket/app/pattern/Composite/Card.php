@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 class Card extends AbstractCard implements ProductInterface
 {
     public $products = [];
+    public $total_price = 0;
     public function ModelProduct()
     {
         Str::JSON_P($this->products);
@@ -28,7 +29,8 @@ class Card extends AbstractCard implements ProductInterface
         foreach ($this->products as $product){
             $total_price += $product->price;
         }
-        return $total_price;
+        $this->total_price = $total_price;
+        return $this->total_price;
     }
 
     public function GetName()
