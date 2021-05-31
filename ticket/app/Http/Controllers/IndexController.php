@@ -15,6 +15,9 @@ use App\pattern\Composite\Card;
 use App\pattern\Composite\LapTap;
 use App\pattern\Composite\Mobile;
 use App\pattern\Composite\Packaged;
+use App\pattern\Decorator\ProductOne;
+use App\pattern\Decorator\ProductThere;
+use App\pattern\Decorator\ProductTow;
 use App\pattern\FactoryMethod\FactorYModel_MT1;
 use App\pattern\FactoryMethod\FactorYModel_SDS;
 use App\pattern\ProtoType\Author;
@@ -123,12 +126,19 @@ class IndexController extends Controller
         //--------------------------------------------------------------------------------
 
         // Composite
-        $composite = new Card();
+/*        $composite = new Card();
         $boxing = new Packaged();
         $composite->addItem(new LapTap('HP envy 15 K008' , 5000));
         $composite->addItem(new Mobile('Samsung A5 2016' , 5000));
         $boxing->BoxingPrice($composite->GetPrice());
-        return $composite->GetName() . '/////////////////' . 'total price = ' . $composite->GetPrice().'////////////////// '.'Price Send Product ='.$boxing->GetPriceBoxing() ;
+        return $composite->GetName() . '////////////////' . 'total price = ' . $composite->GetPrice().'////////////////// '.'Price Send Product ='.$boxing->GetPriceBoxing() ;*/
+
+        //----------------------------------------------------------------------------------
+
+        //Decorator
+
+        $decorator = new ProductThere(new ProductTow(new ProductOne()));
+        return $decorator->GetPrice();
     }
 
 
