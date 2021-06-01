@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\buy;
 use App\Models\ticket;
+use App\Models\User;
 use App\pattern\Adapter\CarBenzAdapter;
 use App\pattern\Bridge\CarTow;
 use App\pattern\Bridge\ColorBlue;
@@ -23,6 +24,7 @@ use App\pattern\DependencyInjection\UserLogin;
 use App\pattern\Facade\Facade;
 use App\pattern\FactoryMethod\FactorYModel_MT1;
 use App\pattern\FactoryMethod\FactorYModel_SDS;
+use App\pattern\Fluent\FluentClass;
 use App\pattern\ProtoType\Author;
 use App\pattern\ProtoType\Page;
 use App\pattern\SimpleFactory\ItemOne;
@@ -163,6 +165,9 @@ class IndexController extends Controller
 
         //------------------------------------------------------------------------------------
 
+        // Fluent
+/*        $fluent = new FluentClass();
+        $fluent->orderBy('id' , 'desc')->where('id' , '5')->get();*/
     }
 
 
