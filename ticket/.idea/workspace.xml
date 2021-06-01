@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af515348-b180-475e-a4c8-8cae75cbc9e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/pattern/Fluent/FluentClass.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Fluent/FluentInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Proxy/AuthProxy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Proxy/ClassProxy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Proxy/ProxyInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pattern/Fluent/FluentClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/pattern/Fluent/FluentClass.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +244,7 @@
       <workItem from="1622443122183" duration="206000" />
       <workItem from="1622473048559" duration="177000" />
       <workItem from="1622523086785" duration="3359000" />
-      <workItem from="1622551382317" duration="2630000" />
+      <workItem from="1622551382317" duration="8867000" />
     </task>
     <servers />
   </component>

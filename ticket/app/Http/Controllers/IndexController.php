@@ -27,6 +27,8 @@ use App\pattern\FactoryMethod\FactorYModel_SDS;
 use App\pattern\Fluent\FluentClass;
 use App\pattern\ProtoType\Author;
 use App\pattern\ProtoType\Page;
+use App\pattern\Proxy\AuthProxy;
+use App\pattern\Proxy\ClassProxy;
 use App\pattern\SimpleFactory\ItemOne;
 use App\pattern\SimpleFactory\SimpleFactory;
 use App\pattern\StaticFactory\ClassStaticFactory;
@@ -168,6 +170,19 @@ class IndexController extends Controller
         // Fluent
 /*        $fluent = new FluentClass();
         $fluent->orderBy('id' , 'desc')->where('id' , '5')->get();*/
+
+        //-------------------------------------------------------------------------------------
+
+        // Proxy
+/*        $user = new ClassProxy();
+        $user->register('sina' , '123456' , 'sina1010' , '09395231890');
+        $user->register('arash' , '5689879878474' , 'arash1010' , '09100109848');
+        $user->register('ali' , '5689879878474' , 'arash1010' , '09100109848');
+        $user->register('ahmad' , '5689879878474' , 'arash1010' , '09100109848');
+        $user->register('reza' , '5689879878474' , 'arash1010' , '09100109848');
+        Str::JSON_P($user->getUsers());*/
+
+        //------------------------------------------------------------------------------------
     }
 
 

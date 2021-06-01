@@ -4,7 +4,7 @@
 namespace App\pattern\Fluent;
 
 
-class FluentClass
+class FluentClass implements FluentInterface
 {
     public function orderBy($row , $val)
     {
