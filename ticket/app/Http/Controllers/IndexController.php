@@ -18,6 +18,8 @@ use App\pattern\Composite\Packaged;
 use App\pattern\Decorator\ProductOne;
 use App\pattern\Decorator\ProductThere;
 use App\pattern\Decorator\ProductTow;
+use App\pattern\DependencyInjection\AuthUser;
+use App\pattern\DependencyInjection\UserLogin;
 use App\pattern\FactoryMethod\FactorYModel_MT1;
 use App\pattern\FactoryMethod\FactorYModel_SDS;
 use App\pattern\ProtoType\Author;
@@ -137,8 +139,21 @@ class IndexController extends Controller
 
         //Decorator
 
-        $decorator = new ProductThere(new ProductTow(new ProductOne()));
-        return $decorator->GetPrice();
+/*        $decorator = new ProductThere(new ProductTow(new ProductOne()));
+        return $decorator->GetPrice();*/
+
+        //-------------------------------------------------------------------------------------
+
+        // Dependency Injection
+/*        $dependency_injection = new AuthUser('Sina','sina1010anis@gamil.comg','sina1010anis','09395231890');
+        $DEP_INJ = new UserLogin($dependency_injection);
+        $data=$DEP_INJ->setUser();
+        if ($data['Name'] == 'Sina')
+            Str::JSON_P($DEP_INJ->setUser());
+        else
+            Str::JSON_P('No');*/
+
+        //----------------------------------------------------------------------------------
     }
 
 

@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af515348-b180-475e-a4c8-8cae75cbc9e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/pattern/Decorator/ClassInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/Decorator/ProductOne.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/Decorator/ProductThere.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/Decorator/ProductTow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/DependencyInjection/AuthUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/DependencyInjection/UserLogin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/DependencyInjection/UserLoginInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +175,10 @@
       <recent name="C:\wamp64\www\s1\ticket\public\data\icon" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.TS.test">
+  <component name="RunManager" selected="JavaScript Debug.Kernel.php">
+    <configuration name="Kernel.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ticket/Http/Kernel.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="TS.test" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="App\pattern\TS" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/app/pattern/TS.php" method="test" scope="Method" />
       <method v="2" />
@@ -192,6 +192,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.Kernel.php" />
         <item itemvalue="PHPUnit.TS.test" />
       </list>
     </recent_temporary>
@@ -236,6 +237,8 @@
       <workItem from="1622387323308" duration="589000" />
       <workItem from="1622437260550" duration="1151000" />
       <workItem from="1622443122183" duration="206000" />
+      <workItem from="1622473048559" duration="177000" />
+      <workItem from="1622523086785" duration="2812000" />
     </task>
     <servers />
   </component>
