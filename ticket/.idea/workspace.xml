@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af515348-b180-475e-a4c8-8cae75cbc9e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/pattern/DependencyInjection/AuthUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/DependencyInjection/UserLogin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pattern/DependencyInjection/UserLoginInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Facade/Facade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Facade/FacadeInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Facade/Instagram/ClassFacadeInstagram.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Facade/Signal/ClassFacadeSignal.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pattern/Facade/Telgram/ClassFacadeTelgram.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
     </list>
@@ -150,7 +152,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/pattern/Bridge" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/pattern/Facade/Telgram" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -165,6 +167,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\s1\ticket\app\pattern\Facade\Telgram" />
+      <recent name="C:\wamp64\www\s1\ticket\app\pattern\Facade\Signal" />
       <recent name="C:\wamp64\www\s1\ticket\app\pattern\Bridge" />
       <recent name="C:\wamp64\www\s1\ticket\app\pattern\FactoryMethod" />
       <recent name="C:\wamp64\www\s1\ticket\resources\css" />
@@ -238,7 +242,8 @@
       <workItem from="1622437260550" duration="1151000" />
       <workItem from="1622443122183" duration="206000" />
       <workItem from="1622473048559" duration="177000" />
-      <workItem from="1622523086785" duration="2812000" />
+      <workItem from="1622523086785" duration="3359000" />
+      <workItem from="1622551382317" duration="1461000" />
     </task>
     <servers />
   </component>

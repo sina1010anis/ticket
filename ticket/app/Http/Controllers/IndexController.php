@@ -20,6 +20,7 @@ use App\pattern\Decorator\ProductThere;
 use App\pattern\Decorator\ProductTow;
 use App\pattern\DependencyInjection\AuthUser;
 use App\pattern\DependencyInjection\UserLogin;
+use App\pattern\Facade\Facade;
 use App\pattern\FactoryMethod\FactorYModel_MT1;
 use App\pattern\FactoryMethod\FactorYModel_SDS;
 use App\pattern\ProtoType\Author;
@@ -154,6 +155,14 @@ class IndexController extends Controller
             Str::JSON_P('No');*/
 
         //----------------------------------------------------------------------------------
+
+        // Facade Design Pattern
+/*        $Facade=new Facade();
+        Str::JSON_P($Facade->sendMessage(' Hello World!')->setName());
+        echo '<h1>'.$Facade.'</h1>';*/
+
+        //------------------------------------------------------------------------------------
+
     }
 
 
