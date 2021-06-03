@@ -1342,7 +1342,7 @@ function startsWithEndTagOpen(source, tag) {
 }
 
 function hoistStatic(root, context) {
-    walk(root, context,
+    walk(root, context, 
     // Root node is unfortunately non-hoistable due to potential parent
     // fallthrough attributes.
     isSingleElementRoot(root, root.children[0]));
@@ -2470,7 +2470,7 @@ const transformExpression = (node, context) => {
                 if (exp &&
                     exp.type === 4 /* SIMPLE_EXPRESSION */ &&
                     !(dir.name === 'on' && arg)) {
-                    dir.exp = processExpression(exp, context,
+                    dir.exp = processExpression(exp, context, 
                     // slot args must be processed as function params
                     dir.name === 'slot');
                 }
@@ -2484,10 +2484,10 @@ const transformExpression = (node, context) => {
 // Important: since this function uses Node.js only dependencies, it should
 // always be used with a leading !true check so that it can be
 // tree-shaken from the browser build.
-function processExpression(node, context,
+function processExpression(node, context, 
 // some expressions like v-slot props & v-for aliases should be parsed as
 // function params
-asParams = false,
+asParams = false, 
 // v-on handler values may contain multiple statements
 asRawStatements = false) {
     {
@@ -2618,7 +2618,7 @@ function createIfBranch(node, dir) {
 }
 function createCodegenNodeForBranch(branch, keyIndex, context) {
     if (branch.condition) {
-        return createConditionalExpression(branch.condition, createChildrenCodegenNode(branch, keyIndex, context),
+        return createConditionalExpression(branch.condition, createChildrenCodegenNode(branch, keyIndex, context), 
         // make sure to pass in asBlock: true so that the comment node call
         // closes the current block.
         createCallExpression(context.helper(CREATE_COMMENT), [
@@ -3116,7 +3116,7 @@ function buildSlots(node, context, buildSlotFn = buildClientSlotFn) {
         : hasForwardedSlots(node.children)
             ? 3 /* FORWARDED */
             : 1 /* STABLE */;
-    let slots = createObjectExpression(slotsProperties.concat(createObjectProperty(`_`,
+    let slots = createObjectExpression(slotsProperties.concat(createObjectProperty(`_`, 
     // 2 = compiled but dynamic = can skip normalization, but must run diff
     // 1 = compiled and static = can skip normalization AND diff as optimized
     createSimpleExpression(slotFlag + (( true) ? ` /* ${_vue_shared__WEBPACK_IMPORTED_MODULE_0__.slotFlagsText[slotFlag]} */` : 0), false))), loc);
@@ -3191,7 +3191,7 @@ const transformElement = (node, context) => {
         let vnodeDynamicProps;
         let dynamicPropNames;
         let vnodeDirectives;
-        let shouldUseBlock =
+        let shouldUseBlock = 
         // dynamic component may resolve to plain elements
         isDynamicComponent ||
             vnodeTag === TELEPORT ||
@@ -4590,7 +4590,7 @@ function compile(template, options = {}) {
             ...(options.nodeTransforms || [])
         ],
         directiveTransforms: (0,_vue_shared__WEBPACK_IMPORTED_MODULE_1__.extend)({}, DOMDirectiveTransforms, options.directiveTransforms || {}),
-        transformHoist: null
+        transformHoist: null 
     }));
 }
 function parse(template, options = {}) {
@@ -4908,7 +4908,7 @@ function createGetter(isReadonly = false, shallow = false) {
             return shouldUnwrap ? res.value : res;
         }
         if ((0,_vue_shared__WEBPACK_IMPORTED_MODULE_0__.isObject)(res)) {
-            // Convert returned value into a Proxy as well. we do the isObject check
+            // Convert returned value into a proxy as well. we do the isObject check
             // here to avoid invalid value warning. Also need to lazy access readonly
             // and reactive here to avoid circular dependency.
             return isReadonly ? readonly(res) : reactive(res);
@@ -5298,7 +5298,7 @@ function getTargetType(value) {
         : targetTypeMap((0,_vue_shared__WEBPACK_IMPORTED_MODULE_0__.toRawType)(value));
 }
 function reactive(target) {
-    // if trying to observe a readonly Proxy, return the readonly version.
+    // if trying to observe a readonly proxy, return the readonly version.
     if (target && target["__v_isReadonly" /* IS_READONLY */]) {
         return target;
     }
@@ -5323,7 +5323,7 @@ function readonly(target) {
  * Returns a reactive-copy of the original object, where only the root level
  * properties are readonly, and does NOT unwrap refs nor recursively convert
  * returned properties.
- * This is used for creating the props Proxy object for stateful components.
+ * This is used for creating the props proxy object for stateful components.
  */
 function shallowReadonly(target) {
     return createReactiveObject(target, true, shallowReadonlyHandlers, shallowReadonlyCollectionHandlers, shallowReadonlyMap);
@@ -5822,7 +5822,7 @@ function handleError(err, instance, type, throwInDev = true) {
     const contextVNode = instance ? instance.vnode : null;
     if (instance) {
         let cur = instance.parent;
-        // the exposed instance is the render Proxy to keep it consistent with 2.x
+        // the exposed instance is the render proxy to keep it consistent with 2.x
         const exposedInstance = instance.proxy;
         // in production the hook receives only the error code
         const errorInfo = ( true) ? ErrorTypeStrings[type] : 0;
@@ -6349,7 +6349,7 @@ const setCompiledSlotRendering = (n) => (isRenderingCompiledSlot += n);
  * Compiler runtime helper for rendering `<slot/>`
  * @private
  */
-function renderSlot(slots, name, props = {},
+function renderSlot(slots, name, props = {}, 
 // this is not a user-facing function, so the fallback is always generated by
 // the compiler and guaranteed to be a function returning an array
 fallback, noSlotted) {
@@ -6481,7 +6481,7 @@ function renderComponentRoot(instance) {
     try {
         let fallthroughAttrs;
         if (vnode.shapeFlag & 4 /* STATEFUL_COMPONENT */) {
-            // withProxy is a Proxy with a different `has` trap only for
+            // withProxy is a proxy with a different `has` trap only for
             // runtime-compiled render functions using `with` block.
             const proxyToUse = withProxy || proxy;
             result = normalizeVNode(render.call(proxyToUse, proxyToUse, renderCache, props, setupState, data, ctx));
@@ -6768,7 +6768,7 @@ const SuspenseImpl = {
     // on a vnode's type and calls the `process` method, passing in renderer
     // internals.
     __isSuspense: true,
-    process(n1, n2, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized,
+    process(n1, n2, container, anchor, parentComponent, parentSuspense, isSVG, slotScopeIds, optimized, 
     // platform-specific impl passed from renderer
     rendererInternals) {
         if (n1 == null) {
@@ -7073,11 +7073,11 @@ function createSuspenseBoundary(vnode, parent, parentComponent, container, hidde
                     vnode.el = hydratedEl;
                 }
                 const placeholder = !hydratedEl && instance.subTree.el;
-                setupRenderEffect(instance, vnode,
+                setupRenderEffect(instance, vnode, 
                 // component may have been moved before resolve.
                 // if this is not a hydration, instance.subTree will be the comment
                 // placeholder.
-                parentNode(hydratedEl || instance.subTree.el),
+                parentNode(hydratedEl || instance.subTree.el), 
                 // anchor will not be used if this is hydration, so only need to
                 // consider the comment placeholder case.
                 hydratedEl ? null : next(instance.subTree), suspense, isSVG, optimized);
@@ -7614,7 +7614,7 @@ function injectHook(type, hook, target = currentInstance, prepend = false) {
                 ));
     }
 }
-const createHook = (lifecycle) => (hook, target = currentInstance) =>
+const createHook = (lifecycle) => (hook, target = currentInstance) => 
 // post-create lifecycle registrations are noops during SSR
 !isInSSRComponentSetup && injectHook(lifecycle, hook, target);
 const onBeforeMount = createHook("bm" /* BEFORE_MOUNT */);
@@ -8237,7 +8237,7 @@ const KeepAliveImpl = {
         watch(() => [props.include, props.exclude], ([include, exclude]) => {
             include && pruneCache(name => matches(include, name));
             exclude && pruneCache(name => !matches(exclude, name));
-        },
+        }, 
         // prune post-render after `current` has been updated
         { flush: 'post', deep: true });
         // cache sub tree after render
@@ -9706,7 +9706,7 @@ function baseCreateRenderer(options, createHydrationFns) {
             const oldVNode = oldChildren[i];
             const newVNode = newChildren[i];
             // Determine the container (parent element) for the patch.
-            const container =
+            const container = 
             // - In the case of a Fragment, we need to provide the actual parent
             // of the Fragment itself so it can move its children.
             oldVNode.type === Fragment ||
@@ -9997,9 +9997,9 @@ function baseCreateRenderer(options, createHydrationFns) {
                 if ((true)) {
                     startMeasure(instance, `patch`);
                 }
-                patch(prevTree, nextTree,
+                patch(prevTree, nextTree, 
                 // parent may have changed if it's in a teleport
-                hostParentNode(prevTree.el),
+                hostParentNode(prevTree.el), 
                 // anchor may have changed if it's in a fragment
                 getNextHostNode(prevTree), instance, parentSuspense, isSVG);
                 if ((true)) {
@@ -10860,7 +10860,7 @@ function resolveAsset(type, name, warnMissing = true, maybeSelfReference = false
                 return Component;
             }
         }
-        const res =
+        const res = 
         // local registration
         // check instance[type] first for components with mixin or extends.
         resolve(instance[type] || Component[type], name) ||
@@ -11027,7 +11027,7 @@ function _createVNode(type, props = null, children = null, patchFlag = 0, dynami
     }
     // class & style normalization.
     if (props) {
-        // for reactive or Proxy objects, we need to clone it to enable mutation.
+        // for reactive or proxy objects, we need to clone it to enable mutation.
         if ((0,_vue_reactivity__WEBPACK_IMPORTED_MODULE_0__.isProxy)(props) || InternalObjectKey in props) {
             props = (0,_vue_shared__WEBPACK_IMPORTED_MODULE_1__.extend)({}, props);
         }
@@ -11204,7 +11204,7 @@ function createStaticVNode(content, numberOfNodes) {
 /**
  * @private
  */
-function createCommentVNode(text = '',
+function createCommentVNode(text = '', 
 // when used as the v-else branch, the comment node must be created as a
 // block to ensure correct updates.
 asBlock = false) {
@@ -11386,15 +11386,15 @@ function createDuplicateChecker() {
 }
 let shouldCacheAccess = true;
 function applyOptions(instance, options, deferredData = [], deferredWatch = [], deferredProvide = [], asMixin = false) {
-    const {
+    const { 
     // composition
-    mixins, extends: extendsOptions,
+    mixins, extends: extendsOptions, 
     // state
-    data: dataOptions, computed: computedOptions, methods, watch: watchOptions, provide: provideOptions, inject: injectOptions,
+    data: dataOptions, computed: computedOptions, methods, watch: watchOptions, provide: provideOptions, inject: injectOptions, 
     // assets
-    components, directives,
+    components, directives, 
     // lifecycle
-    beforeMount, mounted, beforeUpdate, updated, activated, deactivated, beforeDestroy, beforeUnmount, destroyed, unmounted, render, renderTracked, renderTriggered, errorCaptured,
+    beforeMount, mounted, beforeUpdate, updated, activated, deactivated, beforeDestroy, beforeUnmount, destroyed, unmounted, render, renderTracked, renderTriggered, errorCaptured, 
     // public API
     expose } = options;
     const publicThis = instance.proxy;
@@ -11464,7 +11464,7 @@ function applyOptions(instance, options, deferredData = [], deferredWatch = [], 
         for (const key in methods) {
             const methodHandler = methods[key];
             if ((0,_vue_shared__WEBPACK_IMPORTED_MODULE_1__.isFunction)(methodHandler)) {
-                // In dev mode, we use the `createRenderContext` function to define methods to the Proxy target,
+                // In dev mode, we use the `createRenderContext` function to define methods to the proxy target,
                 // and those are read-only but reconfigurable, so it needs to be redefined here
                 if ((true)) {
                     Object.defineProperty(ctx, key, {
@@ -11767,7 +11767,7 @@ function mergeOptions(to, from, instance) {
 }
 
 /**
- * #2437 In Vue 3, functional components do not have a public instance Proxy but
+ * #2437 In Vue 3, functional components do not have a public instance proxy but
  * they exist in the internal parent chain. For code that relies on traversing
  * public $parent chains, skip functional ones and go to the parent instead.
  */
@@ -11963,12 +11963,12 @@ const RuntimeCompiledPublicInstanceProxyHandlers = (0,_vue_shared__WEBPACK_IMPOR
         return has;
     }
 });
-// In dev mode, the Proxy target exposes the same properties as seen on `this`
+// In dev mode, the proxy target exposes the same properties as seen on `this`
 // for easier console inspection. In prod mode it will be an empty object so
 // these properties definitions can be skipped.
 function createRenderContext(instance) {
     const target = {};
-    // expose internal instance for Proxy handlers
+    // expose internal instance for proxy handlers
     Object.defineProperty(target, `_`, {
         configurable: true,
         enumerable: false,
@@ -11980,7 +11980,7 @@ function createRenderContext(instance) {
             configurable: true,
             enumerable: false,
             get: () => publicPropertiesMap[key](instance),
-            // intercepted by the Proxy so no need for implementation,
+            // intercepted by the proxy so no need for implementation,
             // but needed to prevent set errors
             set: _vue_shared__WEBPACK_IMPORTED_MODULE_1__.NOOP
         });
@@ -12152,9 +12152,9 @@ function setupStatefulComponent(instance, isSSR) {
             }
         }
     }
-    // 0. create render Proxy property access cache
+    // 0. create render proxy property access cache
     instance.accessCache = Object.create(null);
-    // 1. create public instance / render Proxy
+    // 1. create public instance / render proxy
     // also mark it raw so it's never observed
     instance.proxy = new Proxy(instance.ctx, PublicInstanceProxyHandlers);
     if ((true)) {
@@ -12251,7 +12251,7 @@ function finishComponentSetup(instance, isSSR) {
         }
         instance.render = (Component.render || _vue_shared__WEBPACK_IMPORTED_MODULE_1__.NOOP);
         // for runtime-compiled render functions using `with` blocks, the render
-        // Proxy used needs a different `has` handler which is more performant and
+        // proxy used needs a different `has` handler which is more performant and
         // also only allows a whitelist of globals to fallthrough.
         if (instance.render._rc) {
             instance.withProxy = new Proxy(instance.ctx, RuntimeCompiledPublicInstanceProxyHandlers);
@@ -13040,7 +13040,7 @@ function patchAttr(el, key, value, isSVG) {
 
 // __UNSAFE__
 // functions. The user is responsible for using them with only trusted content.
-function patchDOMProp(el, key, value,
+function patchDOMProp(el, key, value, 
 // the following args are passed only due to potential innerHTML/textContent
 // overriding existing VNodes, in which case the old tree must be properly
 // unmounted.
@@ -16874,7 +16874,8 @@ var app = (0,vue_dist_vue_esm_bundler_js__WEBPACK_IMPORTED_MODULE_2__.createApp)
       type_car: '1',
       next: '2',
       back: '1',
-      name_ticket: ''
+      name_ticket: '',
+      item_set_size_product: ''
     };
   },
   components: {
@@ -16884,6 +16885,14 @@ var app = (0,vue_dist_vue_esm_bundler_js__WEBPACK_IMPORTED_MODULE_2__.createApp)
     view_ticket: _components_index_view_ticket__WEBPACK_IMPORTED_MODULE_6__.default
   },
   methods: {
+    send_item_search_size_product: function send_item_search_size_product() {
+      axios__WEBPACK_IMPORTED_MODULE_7___default().post('/EAV', {
+        id: this.item_set_size_product
+      }).then(function (res) {
+        $('.view_price').html(res.data[0]);
+        $('.view_btn_buy').html(res.data[1]);
+      });
+    },
     search_name_ticket: function search_name_ticket(e) {
       this.name_ticket = e.target.value;
       $('.part-ticket li').hide();
@@ -21435,7 +21444,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".header{\n    width: 100%;\n    height: 60px;\n    padding: 10px;\n    box-sizing: border-box;\n    box-shadow: 1px 1px 10px rgba(0,0,0,.2);\n}\n.header .icon-logo{\n    height: 100%;\n}\n.index-page-select-type-ticket{\n    width: 100%;\n    height:calc(100vh - 60px);\n}\n.checked{\n    background-color: #919191;\n    color: #000;\n}\n.group-select-type-ticket{\n    width: 100%;\n    height: auto;\n}\n.item-select-group{\n    width: 300px;\n    height: 150px;\n    padding: 20px;\n    margin: 0 10px;\n    box-sizing: border-box;\n    border-radius: 5px;\n    border: 1px solid #e0e0e0;\n}\n.label-radio-btn{\n    position: relative;\n    bottom: 3px;\n}\n.group-select-type-ticket{\n    margin: 10px 0;\n}\n.group-btn-send-ticket button{\n    padding: 8px 25px;\n    background-color: unset;\n    border: 1px solid #EF2D2B;\n    border-radius: 5px;\n    cursor: pointer;\n    transition: 0.2s;\n    color: #EF2D2B;\n    outline: none;\n}\n.group-btn-send-ticket button:hover{\n    background-color:#EF2D2B ;\n    color: #ffffff;\n}\n.group-select-type-ticket-select-input select{\n    padding: 5px 10px;\n    position: relative;\n    border: 1px solid #eaeaea;\n    border-radius: 5px;\n    outline: none;\n    right: 10px;\n}\n.icon-index-page img{\n    width: 180px!important;\n}\n.group-item-ticket{\n    width: 100%;\n    padding: 10px;\n    box-sizing: border-box;\n    height: calc(100vh - 60px);\n}\n.part-filter{\n    width: 25%;\n    border-radius: 10px;\n    height: 100%;\n    padding: 10px;\n    box-sizing: border-box;\n    overflow-y: scroll;\n    border: 1px solid #d4d4d4;\n}\n.part-ticket{\n    width: 74%;\n    border-radius: 10px;\n    height: 100%;\n    padding: 10px;\n    box-sizing: border-box;\n    overflow-y: scroll;\n    border: 1px solid #d4d4d4;\n}\n::-webkit-scrollbar{\n    width: 7px;\n}\n::-webkit-scrollbar-thumb{\n    background-color: #dbdbdb;\n    border-radius: 100px;\n}\n.item-filter{\n    width: 100%;\n    padding: 10px;\n    margin: 10px 0;\n    box-sizing: border-box;\n    border-radius: 5px;\n    border: 1px solid #e3e3e3;\n}\n.item-filter select{\n    width: 100%;\n    padding: 10px 0;\n    outline: none;\n    box-sizing: border-box;\n    border: 1px solid #EF2D2B;\n    border-radius:10px;\n}\n.item-filter input{\n    width: 100%;\n    padding: 10px 10px;\n    outline: none;\n    margin: 10px 0;\n    box-sizing: border-box;\n    border: 1px solid #EF2D2B;\n    border-radius:10px;\n}\n.part-ticket li{\n    width: 100%;\n    padding: 15px;\n    height: 150px;\n    list-style: none;\n    margin: 25px 0;\n    box-sizing: border-box;\n    border-radius: 10px;\n    position: relative;\n    border: 1px solid #c3c3c3;\n}\n.part-ticket li img{\n    height: 100%;\n}\n.part-ticket .vip{\n    box-shadow: 1px 1px 10px rgb(241, 210, 12);\n    border: none!important;\n}\n.view-des-ticket{\n    padding: 10px 0;\n    min-width: 200px;\n    margin: 0 20px;\n    box-sizing: border-box;\n    height: 100%;\n    border-radius: 10px;\n    background-color: #f8f8f8;\n}\n.title-name-ticket p{\n    color:#EF2D2B ;\n}\n.btn-buy-ticket{\n    width: 100%;\n    display: block;\n    padding: 10px 0;\n    box-sizing: border-box;\n    background-color:#EF2D2B ;\n    color: white;\n    border: 1px solid #EF2D2B;\n    border-radius: 5px;\n    text-align: center;\n    transition: 0.2s;\n    margin: 10px 0;\n}\n.btn-buy-ticket:hover{\n    background-color: unset;\n    color:#EF2D2B ;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".header{\n    width: 100%;\n    height: 60px;\n    padding: 10px;\n    box-sizing: border-box;\n    box-shadow: 1px 1px 10px rgba(0,0,0,.2);\n}\n.header .icon-logo{\n    height: 100%;\n}\n.index-page-select-type-ticket{\n    width: 100%;\n    height:calc(100vh - 60px);\n}\n.checked{\n    background-color: #919191;\n    color: #000;\n}\n.group-select-type-ticket{\n    width: 100%;\n    height: auto;\n}\n.item-select-group{\n    width: 300px;\n    height: 150px;\n    padding: 20px;\n    margin: 0 10px;\n    box-sizing: border-box;\n    border-radius: 5px;\n    border: 1px solid #e0e0e0;\n}\n.label-radio-btn{\n    position: relative;\n    bottom: 3px;\n}\n.group-select-type-ticket{\n    margin: 10px 0;\n}\n.group-btn-send-ticket button{\n    padding: 8px 25px;\n    background-color: unset;\n    border: 1px solid #EF2D2B;\n    border-radius: 5px;\n    cursor: pointer;\n    transition: 0.2s;\n    color: #EF2D2B;\n    outline: none;\n}\n.group-btn-send-ticket button:hover{\n    background-color:#EF2D2B ;\n    color: #ffffff;\n}\n.group-select-type-ticket-select-input select{\n    padding: 5px 10px;\n    position: relative;\n    border: 1px solid #eaeaea;\n    border-radius: 5px;\n    outline: none;\n    right: 10px;\n}\n.icon-index-page img{\n    width: 180px!important;\n}\n.group-item-ticket{\n    width: 100%;\n    padding: 10px;\n    box-sizing: border-box;\n    height: calc(100vh - 60px);\n}\n.part-filter{\n    width: 25%;\n    border-radius: 10px;\n    height: 100%;\n    padding: 10px;\n    box-sizing: border-box;\n    overflow-y: scroll;\n    border: 1px solid #d4d4d4;\n}\n.part-ticket{\n    width: 74%;\n    border-radius: 10px;\n    height: 100%;\n    padding: 10px;\n    box-sizing: border-box;\n    overflow-y: scroll;\n    border: 1px solid #d4d4d4;\n}\n::-webkit-scrollbar{\n    width: 7px;\n}\n::-webkit-scrollbar-thumb{\n    background-color: #dbdbdb;\n    border-radius: 100px;\n}\n.item-filter{\n    width: 100%;\n    padding: 10px;\n    margin: 10px 0;\n    box-sizing: border-box;\n    border-radius: 5px;\n    border: 1px solid #e3e3e3;\n}\n.item-filter select{\n    width: 100%;\n    padding: 10px 0;\n    outline: none;\n    box-sizing: border-box;\n    border: 1px solid #EF2D2B;\n    border-radius:10px;\n}\n.item-filter input{\n    width: 100%;\n    padding: 10px 10px;\n    outline: none;\n    margin: 10px 0;\n    box-sizing: border-box;\n    border: 1px solid #EF2D2B;\n    border-radius:10px;\n}\n.part-ticket li{\n    width: 100%;\n    padding: 15px;\n    height: 150px;\n    list-style: none;\n    margin: 25px 0;\n    box-sizing: border-box;\n    border-radius: 10px;\n    position: relative;\n    border: 1px solid #c3c3c3;\n}\n.part-ticket li img{\n    height: 100%;\n}\n.part-ticket .vip{\n    box-shadow: 1px 1px 10px rgb(241, 210, 12);\n    border: none!important;\n}\n.view-des-ticket{\n    padding: 10px 0;\n    min-width: 200px;\n    margin: 0 20px;\n    box-sizing: border-box;\n    height: 100%;\n    border-radius: 10px;\n    background-color: #f8f8f8;\n}\n.title-name-ticket p{\n    color:#EF2D2B ;\n}\n.btn-buy-ticket{\n    width: 100%;\n    display: block;\n    padding: 10px 0;\n    box-sizing: border-box;\n    background-color:#EF2D2B ;\n    color: white;\n    border: 1px solid #EF2D2B;\n    border-radius: 5px;\n    text-align: center;\n    transition: 0.2s;\n    margin: 10px 0;\n}\n.btn-buy-ticket:hover{\n    background-color: unset;\n    color:#EF2D2B ;\n}\nbody {\n    background: #f2f2f2;\n    font-family: \"proxima-nova-soft\", sans-serif;\n    font-size: 14px;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n}\n.post-module {\n    position: relative;\n    z-index: 1;\n    display: block;\n    background: #FFFFFF;\n    min-width: 270px;\n    height: 470px;\n    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);\n    transition: all 0.3s linear 0s;\n}\n.post-module:hover,\n.hover {\n    box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);\n}\n.post-module:hover .thumbnail img,\n.hover .thumbnail img {\n    transform: scale(1.1);\n    opacity: 0.6;\n}\n.post-module .thumbnail {\n    background: #000000;\n    height: 400px;\n    overflow: hidden;\n}\n.post-module .thumbnail .date {\n    position: absolute;\n    top: 20px;\n    right: 20px;\n    z-index: 1;\n    background: #e74c3c;\n    width: 55px;\n    height: 55px;\n    padding: 12.5px 0;\n    border-radius: 100%;\n    color: #FFFFFF;\n    font-weight: 700;\n    text-align: center;\n    -webkti-box-sizing: border-box;\n    box-sizing: border-box;\n}\n.post-module .thumbnail .date .day {\n    font-size: 18px;\n}\n.post-module .thumbnail .date .month {\n    font-size: 12px;\n    text-transform: uppercase;\n}\n.post-module .thumbnail img {\n    display: block;\n    width: 120%;\n    transition: all 0.3s linear 0s;\n}\n.post-module .post-content {\n    position: absolute;\n    bottom: 0;\n    background: #FFFFFF;\n    width: 100%;\n    padding: 30px;\n    -webkti-box-sizing: border-box;\n    box-sizing: border-box;\n    transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;\n}\n.post-module .post-content .category {\n    position: absolute;\n    top: -34px;\n    left: 0;\n    background: #e74c3c;\n    padding: 10px 15px;\n    color: #FFFFFF;\n    font-size: 14px;\n    font-weight: 600;\n    text-transform: uppercase;\n}\n.post-module .post-content .title {\n    margin: 0;\n    padding: 0 0 10px;\n    color: #333333;\n    font-size: 26px;\n    font-weight: 700;\n}\n.post-module .post-content .sub_title {\n    margin: 0;\n    padding: 0 0 20px;\n    color: #e74c3c;\n    font-size: 20px;\n    font-weight: 400;\n}\n.post-module .post-content .description {\n    display: none;\n    color: #666666;\n    font-size: 14px;\n    line-height: 1.8em;\n}\n.post-module .post-content .post-meta {\n    margin: 30px 0 0;\n    color: #999999;\n}\n.post-module .post-content .post-meta .timestamp {\n    margin: 0 16px 0 0;\n}\n.post-module .post-content .post-meta a {\n    color: #999999;\n    text-decoration: none;\n}\n.hover .post-content .description {\n    display: block !important;\n    height: auto !important;\n    opacity: 1 !important;\n}\n.container {\n    max-width: 800px;\n    min-width: 640px;\n    margin: 0 auto;\n}\n.container:before,\n.container:after {\n    content: \"\";\n    display: block;\n    clear: both;\n}\n.container .column {\n    width: 50%;\n    padding: 0 25px;\n    -webkti-box-sizing: border-box;\n    box-sizing: border-box;\n    float: left;\n}\n.container .column .demo-title {\n    margin: 0 0 15px;\n    color: #666666;\n    font-size: 18px;\n    font-weight: bold;\n    text-transform: uppercase;\n}\n.container .info {\n    width: 300px;\n    margin: 50px auto;\n    text-align: center;\n}\n.container .info h1 {\n    margin: 0 0 15px;\n    padding: 0;\n    font-size: 24px;\n    font-weight: bold;\n    color: #333333;\n}\n.container .info span {\n    color: #666666;\n    font-size: 12px;\n}\n.container .info span a {\n    color: #000000;\n    text-decoration: none;\n}\n.container .info span .fa {\n    color: #e74c3c;\n}\n/* CSS used here will be applied after bootstrap.css */\n.carousel {\n    margin-top: 20px;\n}\n.item .thumb {\n    width: 25%;\n    cursor: pointer;\n    float: left;\n}\n.item .thumb img {\n    width: 100%;\n    margin: 2px;\n}\n.item img {\n    width: 100%;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -32357,7 +32366,7 @@ var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
 
 // Bind a function to a context, optionally partially applying any
 // arguments.
-// jQuery.Proxy is deprecated to promote standards (specifically Function#bind)
+// jQuery.proxy is deprecated to promote standards (specifically Function#bind)
 // However, it is not slated for removal any time soon
 jQuery.proxy = function( fn, context ) {
 	var tmp, args, proxy;
@@ -52653,7 +52662,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_header_page_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__.default)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_header_page_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./header_page.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/index/header_page.vue?vue&type=script&lang=js");
-
+ 
 
 /***/ }),
 
@@ -52669,7 +52678,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_index_page_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__.default)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_index_page_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./index_page.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/index/index_page.vue?vue&type=script&lang=js");
-
+ 
 
 /***/ }),
 
@@ -52685,7 +52694,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_view_ticket_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__.default)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_view_ticket_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./view_ticket.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/index/view_ticket.vue?vue&type=script&lang=js");
-
+ 
 
 /***/ }),
 
@@ -52701,7 +52710,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_test_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__.default)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_test_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./test.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/test.vue?vue&type=script&lang=js");
-
+ 
 
 /***/ }),
 
@@ -53293,7 +53302,7 @@ function compileToFunction(template, options) {
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/
+/******/ 	
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -53307,20 +53316,20 @@ function compileToFunction(template, options) {
 /******/ 			loaded: false,
 /******/ 			exports: {}
 /******/ 		};
-/******/
+/******/ 	
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
+/******/ 	
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
-/******/
+/******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/
+/******/ 	
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = __webpack_modules__;
-/******/
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/chunk loaded */
 /******/ 	(() => {
@@ -53352,7 +53361,7 @@ function compileToFunction(template, options) {
 /******/ 			return result;
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
@@ -53364,7 +53373,7 @@ function compileToFunction(template, options) {
 /******/ 			return getter;
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -53376,7 +53385,7 @@ function compileToFunction(template, options) {
 /******/ 			}
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
@@ -53388,12 +53397,12 @@ function compileToFunction(template, options) {
 /******/ 			}
 /******/ 		})();
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -53404,7 +53413,7 @@ function compileToFunction(template, options) {
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/node module decorator */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nmd = (module) => {
@@ -53413,11 +53422,11 @@ function compileToFunction(template, options) {
 /******/ 			return module;
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
 /******/ 	(() => {
 /******/ 		// no baseURI
-/******/
+/******/ 		
 /******/ 		// object to store loaded and loading chunks
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
@@ -53425,19 +53434,19 @@ function compileToFunction(template, options) {
 /******/ 			"/js/app": 0,
 /******/ 			"css/app": 0
 /******/ 		};
-/******/
+/******/ 		
 /******/ 		// no chunk on demand loading
-/******/
+/******/ 		
 /******/ 		// no prefetching
-/******/
+/******/ 		
 /******/ 		// no preloaded
-/******/
+/******/ 		
 /******/ 		// no HMR
-/******/
+/******/ 		
 /******/ 		// no HMR manifest
-/******/
+/******/ 		
 /******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
-/******/
+/******/ 		
 /******/ 		// install a JSONP callback for chunk loading
 /******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
 /******/ 			var [chunkIds, moreModules, runtime] = data;
@@ -53460,20 +53469,20 @@ function compileToFunction(template, options) {
 /******/ 			}
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
-/******/
+/******/ 		
 /******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
-/******/
+/******/ 	
 /************************************************************************/
-/******/
+/******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-/******/
+/******/ 	
 /******/ })()
 ;

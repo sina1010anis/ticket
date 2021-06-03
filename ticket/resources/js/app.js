@@ -15,6 +15,7 @@ const app  = createApp({
         next: '2',
         back: '1',
         name_ticket:'',
+        item_set_size_product:''
     }),
     components:{
         test,
@@ -23,6 +24,12 @@ const app  = createApp({
         view_ticket,
     },
     methods:{
+        send_item_search_size_product(){
+          axios.post('/EAV' , {id:this.item_set_size_product}).then((res)=>{
+              $('.view_price').html(res.data[0])
+              $('.view_btn_buy').html(res.data[1])
+          });
+        },
         search_name_ticket(e){
             this.name_ticket = e.target.value;
             $('.part-ticket li').hide();

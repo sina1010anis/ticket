@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\buy;
+use App\Models\product_test;
+use App\Models\sub_product_test;
 use App\Models\ticket;
 use App\Models\User;
 use App\pattern\Adapter\CarBenzAdapter;
@@ -12,6 +14,18 @@ use App\pattern\Bridge\ColorRed;
 use App\pattern\Builder\Car_Bind;
 use App\pattern\Builder\Car_Builder;
 use App\pattern\Builder\Product\CarOne_Builder;
+use App\pattern\ChainOfResponsibility\CheckedItemChainOf;
+use App\pattern\ChainOfResponsibility\door;
+use App\pattern\ChainOfResponsibility\email;
+use App\pattern\ChainOfResponsibility\ItemCheck;
+use App\pattern\ChainOfResponsibility\login;
+use App\pattern\ChainOfResponsibility\roof;
+use App\pattern\ChainOfResponsibility\StatusChainOf;
+use App\pattern\ChainOfResponsibility\windows;
+use App\pattern\ChainOfResponsibilityTest\Alarm;
+use App\pattern\ChainOfResponsibilityTest\HomeStatus;
+use App\pattern\ChainOfResponsibilityTest\Lights;
+use App\pattern\ChainOfResponsibilityTest\Locks;
 use App\pattern\Composite\Card;
 use App\pattern\Composite\LapTap;
 use App\pattern\Composite\Mobile;
@@ -46,6 +60,8 @@ use App\pattern\TestProject\OrderPizza\Kitchen;
 use App\pattern\TestProject\OrderPizza\Reception;
 use App\purchase\Bank;
 use App\Repository\Index;
+use Database\Factories\ProductTestFactory;
+use Database\Factories\SubProductTestFactory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use PHPUnit\Framework\TestCase;
@@ -70,6 +86,9 @@ class IndexController extends Controller
     }
 
 
+    /**
+     * @throws \Exception
+     */
     public function test()
     {
         /*
@@ -183,8 +202,29 @@ class IndexController extends Controller
         Str::JSON_P($user->getUsers());*/
 
         //------------------------------------------------------------------------------------
+        $product_test = product_test::orderBy('id' , 'desc')->get();
+        return view('test.Item',compact('product_test'));
     }
 
+    public function TestProduct(product_test $name)
+    {
+        $sub_product = sub_product_test::orderBy('id' , 'desc')->whereProduct_test_id($name->id)->first();
+        $size = sub_product_test::orderBy('id' , 'desc')->whereProduct_test_id($name->id)->get();
+        return view('test.view' , compact('sub_product' , 'size'));
+    }
+
+    public function EAV(Request $request)
+    {
+        $item = sub_product_test::whereId($request->id)->first();
+        return [
+            $item->price,
+            '<a href="/addCard/'.$item->id.'">خرید</a>'
+        ];
+    }
+    public function addCard()
+    {
+
+    }
 
     public function sendPay(Bank $bank, ticket $id, \App\DB\Create\buy $buy)
     {

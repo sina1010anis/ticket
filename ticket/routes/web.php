@@ -19,6 +19,9 @@ Route::get('/test', [IndexController::class , 'test'])->name('test');
 Route::get('/sendPay/{id}', [IndexController::class , 'sendPay'])->name('sendPay');
 Route::get('/verifyPay', [IndexController::class , 'verifyPay'])->name('verifyPay');
 Route::post('/axiosTest', [IndexController::class , 'axiosTest'])->name('axiosTest');
+Route::get('/TestProduct/{name}', [IndexController::class , 'TestProduct'])->name('TestProduct');
+Route::get('/addCard/{id}', [IndexController::class , 'addCard'])->name('addCard');
+Route::post('/EAV', [IndexController::class , 'EAV'])->name('EAV');
 
 Auth::routes();
 
